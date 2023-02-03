@@ -1,7 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Navbar() {
+interface NavbarProps {
+    without?: string;
+}
+
+export default function Navbar({ without }: NavbarProps) {
   const [currentTheme, setCurrentTheme] = React.useState("dracula");
   const themes = [
     "light",
@@ -20,6 +24,8 @@ export default function Navbar() {
     setCurrentTheme(nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
+
+  const projectNames = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6'];
 
   return (
     <nav className="navbar bg-base-100">
@@ -42,44 +48,20 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
           >
-            <li tabIndex={0}>
-              <span>Projects</span>
-              <ul className="bg-base-100">
-                <li>
-                  <a>Project 1</a>
-                </li>
-                <li>
-                  <a>Project 2</a>
-                </li>
-                <li>
-                  <a>Project 3</a>
-                </li>
-                <li>
-                  <a>Project 4</a>
-                </li>
-                <li>
-                  <a>Project 5</a>
-                </li>
-                <li>
-                  <a>Project 6</a>
-                </li>
-              </ul>
+            <li>
+                <Link href="/">
+                    <p>Home</p>
+                </Link>
             </li>
-            <li tabIndex={0}>
-              <span>Find me on</span>
-              <ul className="bg-base-100">
-                <li>
-                  <a href="http://www.github.com/MadeOfBees">Github</a>
+            {projectNames.map((project, index) => (
+                <li key={index} className={without === project ? 'disabled' : ''}>
+                    <Link href={`/project/${project}`}>
+                        <p>{project}</p>
+                    </Link>
                 </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/ben-taylor-ba8931264/">
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </li>
+          ))}
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl" onClick={cycleTheme}>
