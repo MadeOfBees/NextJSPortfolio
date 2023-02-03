@@ -8,7 +8,6 @@ const ProjectPage = () => {
     const idString = useRouter().query.id as string;
     const [pageHeader, setPageHeader] = React.useState('');
     const [pageContent, setPageContent] = React.useState('');
-
     
     return (
       <>

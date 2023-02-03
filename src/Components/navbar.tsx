@@ -69,7 +69,7 @@ export default function Navbar({ without }: NavbarProps) {
         </a>
       </div>
       <div className="navbar-end">
-        <a className="btn">Contact me</a>
+        <label htmlFor="contactModal" className="btn" >Contact me</label>
       </div>
     </nav>
   );
