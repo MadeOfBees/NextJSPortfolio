@@ -1,9 +1,26 @@
-// navbar compponent for next.js app that returns a navbar that's blank for now
-
 import React from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [currentTheme, setCurrentTheme] = React.useState("dracula");
+  const themes = [
+    "light",
+    "cyberpunk",
+    "dark",
+    "cupcake",
+    "nord",
+    "retro",
+    "synthwave",
+    "dracula",
+  ];
+
+  const cycleTheme = () => {
+    const currentThemeIndex = themes.indexOf(currentTheme);
+    const nextTheme = themes[(currentThemeIndex + 1) % themes.length];
+    setCurrentTheme(nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  };
+
   return (
     <nav className="navbar bg-base-100">
       <div className="navbar-start">
@@ -27,26 +44,6 @@ export default function Navbar() {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li tabIndex={0}>
-              <span>Themes</span>
-              <ul className="bg-base-100">
-                <li>
-                  <a>Dark</a>
-                </li>
-                <li>
-                  <a>Light</a>
-                </li>
-                <li>
-                  <a>Dracula</a>
-                </li>
-                <li>
-                  <a>Cyberpunk</a>
-                </li>
-                <li>
-                  <a>Other</a>
-                </li>
-              </ul>
-            </li>
             <li tabIndex={0}>
               <span>Projects</span>
               <ul className="bg-base-100">
@@ -77,13 +74,17 @@ export default function Navbar() {
                   <a href="http://www.github.com/MadeOfBees">Github</a>
                 </li>
                 <li>
-                  <a href="http://www.linkedin.com">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/ben-taylor-ba8931264/">
+                    LinkedIn
+                  </a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Bee's portfolio</a>
+        <a className="btn btn-ghost normal-case text-xl" onClick={cycleTheme}>
+          Bee's portfolio
+        </a>
       </div>
       <div className="navbar-end">
         <a className="btn">Contact me</a>
