@@ -24,8 +24,12 @@ export default function Navbar({ without }: NavbarProps) {
     setCurrentTheme(nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
-
-  const projectNames = ['Daily Global Sudoku', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6'];
+    const [projectNames, setProjectNames] = React.useState([]);
+    React.useEffect(() => {
+        fetch('/projects.json')
+            .then(response => response.json())
+            .then(data => setProjectNames(data.map((item: { name: string; }) => item.name)));
+    }, []);
 
   return (
     <nav className="navbar bg-base-100">

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Daily-Global-Sudoku",
+        "pageContent" : "A Sudoku game that updates daily with a new puzzle automatically using a server and a database.",
+        "image": "https://user-images.githubusercontent.com/9198297/216781602-14756b53-1e43-4918-ad5a-bac6f415adac.jpg",
+        "githubLink": "https://github.com/MadeOfBees/DailySudoku/",
+        "deployedLink": "https://daily-global-sudoku.herokuapp.com/"
+    },
+    {
+        "name": "Project 2",
+        "pageContent" : "Proj2 description",
+        "image": "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png",
+        "githubLink": "https://github.com/MadeOfBees/",
+        "deployedLink": "https://daily-global-sudoku.herokuapp.com/"
+    }
+]

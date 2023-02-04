@@ -13,56 +13,24 @@ const ProjectPage = () => {
   const [deployedLink, setDeployedLink] = React.useState("");
 
   React.useEffect(() => {
-    if (idString === "Daily Global Sudoku") {
-      setPageHeader(idString);
-      setPageContent("A Sudoku game that updates daily with a new puzzle automatically using a server and a database.");
-      setPageImage(
-        "https://user-images.githubusercontent.com/9198297/216781602-14756b53-1e43-4918-ad5a-bac6f415adac.jpg"
-      );
-      setGithubLink("https://github.com/MadeOfBees/DailySudoku/");
-      setDeployedLink("https://daily-global-sudoku.herokuapp.com/");
-    } else if (idString === "Project 2") {//////////////////////////////////////////////
-      setPageHeader(idString);
-      setPageContent("This is the second project");
-      setPageImage(
-        "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png"
-      );
-      setGithubLink("http://www.github.com/MadeOfBees");
-      setDeployedLink("http://www.github.com/MadeOfBees");
-    } else if (idString === "Project 3") {//////////////////////////////////////////////
-      setPageHeader(idString);
-      setPageContent("This is the third project");
-      setPageImage(
-        "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png"
-      );
-      setGithubLink("http://www.github.com/MadeOfBees");
-      setDeployedLink("http://www.github.com/MadeOfBees");
-    } else if (idString === "Project 4") {//////////////////////////////////////////////
-      setPageHeader(idString);
-      setPageContent("This is the fourth project");
-      setPageImage(
-        "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png"
-      );
-      setGithubLink("http://www.github.com/MadeOfBees");
-      setDeployedLink("http://www.github.com/MadeOfBees");
-    } else if (idString === "Project 5") {//////////////////////////////////////////////
-      setPageHeader(idString);
-      setPageContent("This is the fifth project");
-      setPageImage(
-        "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png"
-      );
-      setGithubLink("http://www.github.com/MadeOfBees");
-      setDeployedLink("http://www.github.com/MadeOfBees");
-    } else if (idString === "Project 6") {//////////////////////////////////////////////
-      setPageHeader(idString);
-      setPageContent("This is the sixth project");
-      setPageImage(
-        "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png"
-      );
-      setGithubLink("http://www.github.com/MadeOfBees");
-      setDeployedLink("http://www.github.com/MadeOfBees");
-    }
+    fetch("/projects.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const project = data.find(
+          (item: { name: string }) => item.name === idString
+        );
+        if (project) {
+          setPageHeader(project.name);
+          setPageContent(project.pageContent);
+          setPageImage(project.image);
+          setGithubLink(project.githubLink);
+          setDeployedLink(project.deployedLink);
+        } else {
+          return
+        }
+      });
   }, [idString]);
+  
 
   return (
     <>
@@ -75,7 +43,7 @@ const ProjectPage = () => {
       <Navbar without={idString} />
       <main className="flex flex-col items-center justify-center">
         <h1 className="text-5xl font-bold">{pageHeader}</h1>
-        <div className="w-1/3 h-1/3 p-6">
+        <div className="w-1/4 p-6">
           <img
             className="w-full h-full object-cover"
             src={pageImage}
@@ -85,11 +53,11 @@ const ProjectPage = () => {
         <p className="p-6">{pageContent}</p>
         <div className="flex flex-row justify-center w-1/2 h-1/4">
           <div className="flex flex-col items-center justify-center w-1/2 h-full">
-            <h4>Github Link:</h4>
+            {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
             <a href={githubLink}>{githubLink}</a>
           </div>
           <div className="flex flex-col items-center justify-center w-1/2 h-full">
-            <h4>Deployed Link:</h4>
+            {deployedLink ? <h4>Deployed Link:</h4> : <h4></h4>}
             <a href={deployedLink}>{deployedLink}</a>
           </div>
         </div>
