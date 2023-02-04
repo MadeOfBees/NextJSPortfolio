@@ -13,14 +13,14 @@ const ProjectPage = () => {
   const [deployedLink, setDeployedLink] = React.useState("");
 
   React.useEffect(() => {
-    if (idString === "Project 1") {/////////////////////////////////////////////////////
+    if (idString === "Daily Global Sudoku") {
       setPageHeader(idString);
-      setPageContent("This is the first project");
+      setPageContent("A Sudoku game that updates daily with a new puzzle automatically using a server and a database.");
       setPageImage(
-        "https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png"
+        "https://user-images.githubusercontent.com/9198297/216781602-14756b53-1e43-4918-ad5a-bac6f415adac.jpg"
       );
-      setGithubLink("http://www.github.com/MadeOfBees");
-      setDeployedLink("http://www.github.com/MadeOfBees");
+      setGithubLink("https://github.com/MadeOfBees/DailySudoku/");
+      setDeployedLink("https://daily-global-sudoku.herokuapp.com/");
     } else if (idString === "Project 2") {//////////////////////////////////////////////
       setPageHeader(idString);
       setPageContent("This is the second project");
@@ -82,7 +82,7 @@ const ProjectPage = () => {
             alt={pageHeader}
           />
         </div>
-        <p>{pageContent}</p>
+        <p className="p-6">{pageContent}</p>
         <div className="flex flex-row justify-center w-1/2 h-1/4">
           <div className="flex flex-col items-center justify-center w-1/2 h-full">
             <h4>Github Link:</h4>

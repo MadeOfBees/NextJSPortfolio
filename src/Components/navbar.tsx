@@ -25,7 +25,7 @@ export default function Navbar({ without }: NavbarProps) {
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
 
-  const projectNames = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6'];
+  const projectNames = ['Daily Global Sudoku', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6'];
 
   return (
     <nav className="navbar bg-base-100">
@@ -57,7 +57,7 @@ export default function Navbar({ without }: NavbarProps) {
             </li>
             {projectNames.map((project, index) => (
                 <li key={index} className={without === project ? 'disabled' : ''}>
-                    <Link href={`/project/${project}`}>
+                    <Link href={`/projects/${project}`}>
                         <p>{project}</p>
                     </Link>
                 </li>
