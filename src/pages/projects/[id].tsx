@@ -26,11 +26,10 @@ const ProjectPage = () => {
           setGithubLink(project.githubLink);
           setDeployedLink(project.deployedLink);
         } else {
-          return
+          return;
         }
       });
   }, [idString]);
-  
 
   return (
     <>
@@ -51,6 +50,7 @@ const ProjectPage = () => {
           />
         </div>
         <p className="p-6">{pageContent}</p>
+        {deployedLink ? (
         <div className="flex flex-row justify-center w-1/2 h-1/4">
           <div className="flex flex-col items-center justify-center w-1/2 h-full">
             {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
@@ -61,6 +61,14 @@ const ProjectPage = () => {
             <a href={deployedLink}>{deployedLink}</a>
           </div>
         </div>
+        ) : (
+          <div className="flex flex-row justify-center w-1/2 h-1/4">
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
+              <a href={githubLink}>{githubLink}</a>
+            </div>
+          </div>
+        )}
       </main>
       <Footer />
     </>

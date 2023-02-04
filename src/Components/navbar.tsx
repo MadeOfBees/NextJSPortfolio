@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 interface NavbarProps {
-    without?: string;
+  without?: string;
 }
 
 export default function Navbar({ without }: NavbarProps) {
@@ -24,12 +24,14 @@ export default function Navbar({ without }: NavbarProps) {
     setCurrentTheme(nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
-    const [projectNames, setProjectNames] = React.useState([]);
-    React.useEffect(() => {
-        fetch('/projects.json')
-            .then(response => response.json())
-            .then(data => setProjectNames(data.map((item: { name: string; }) => item.name)));
-    }, []);
+  const [projectNames, setProjectNames] = React.useState([]);
+  React.useEffect(() => {
+    fetch("/projects.json")
+      .then((response) => response.json())
+      .then((data) =>
+        setProjectNames(data.map((item: { name: string }) => item.name))
+      );
+  }, []);
 
   return (
     <nav className="navbar bg-base-100">
@@ -55,17 +57,17 @@ export default function Navbar({ without }: NavbarProps) {
             className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
           >
             <li>
-                <Link href="/">
-                    <p>Home</p>
-                </Link>
+              <Link href="/">
+                <p>Home</p>
+              </Link>
             </li>
             {projectNames.map((project, index) => (
-                <li key={index} className={without === project ? 'disabled' : ''}>
-                    <Link href={`/projects/${project}`}>
-                        <p>{project}</p>
-                    </Link>
-                </li>
-          ))}
+              <li key={index} className={without === project ? "disabled" : ""}>
+                <Link href={`/projects/${project}`}>
+                  <p>{project}</p>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl" onClick={cycleTheme}>
@@ -73,7 +75,9 @@ export default function Navbar({ without }: NavbarProps) {
         </a>
       </div>
       <div className="navbar-end">
-        <label htmlFor="contactModal" className="btn" >Contact me</label>
+        <label htmlFor="contactModal" className="btn">
+          Contact me
+        </label>
       </div>
     </nav>
   );
