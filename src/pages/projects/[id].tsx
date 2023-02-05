@@ -16,13 +16,11 @@ const ProjectPage = () => {
 
   React.useEffect(() => {
     if (!project) return;
-    setPageHeader(project.name);
-    setPageContent(project.pageContent);
-    setPageImage(project.image);
-    setGithubLink(project.githubLink);
-    if (project.deployedLink) {
-      setDeployedLink(project.deployedLink);
-    }
+    project.name ? setPageHeader(project.name) : setPageHeader(" ");
+    project.pageContent ? setPageContent(project.pageContent) : setPageContent(" ");
+    project.image ? setPageImage(project.image) : setPageImage("https://developer.valvesoftware.com/w/images/5/5b/Missing_textures_example.png");
+    project.githubLink ? setGithubLink(project.githubLink) : setGithubLink("https://github.com/MadeOfBees");
+    project.deployedLink ? setDeployedLink(project.deployedLink) : null;
   }, [project]);
 
   return (
