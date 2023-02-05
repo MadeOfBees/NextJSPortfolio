@@ -5,7 +5,6 @@ import Navbar from "../../Components/navbar";
 import Footer from "../../Components/footer";
 import projectsData from "../../../public/projects.json";
 
-
 const ProjectPage = () => {
   const idString = useRouter().query.id as string;
   const project = projectsData.find((item) => item.name === idString);
@@ -18,8 +17,12 @@ const ProjectPage = () => {
   React.useEffect(() => {
     if (!project) return;
     setPageHeader(project.name);
-    project.pageContent ? setPageContent(project.pageContent) : setPageContent("");
-    project.githubLink ? setGithubLink(project.githubLink) : setGithubLink("https://github.com/MadeOfBees");
+    project.pageContent
+      ? setPageContent(project.pageContent)
+      : setPageContent("");
+    project.githubLink
+      ? setGithubLink(project.githubLink)
+      : setGithubLink("https://github.com/MadeOfBees");
     project.deployedLink ? setDeployedLink(project.deployedLink) : null;
     setPageImage(`/images/${project.image}`);
   }, [project]);
@@ -33,35 +36,33 @@ const ProjectPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar without={idString} />
-      <main className="flex flex-col items-center justify-center">
-        <h1 className="text-5xl font-bold">{pageHeader}</h1>
-        <div className="w-1/4 p-6">
+      <main className="flex flex-col items-center justify-center mb-20">
+        <h1 className="text-5xl font-bold text-center mb-8"
+        >{pageHeader}</h1>
+        <div className="w-3/4 h-3/4 md:w-1/2 md:h-1/2 lg:w-1/3 lg:h-1/3 xl:w-1/4 xl:h-1/4" style={{ maxWidth: "500px" }}>
           <img
             className="w-full h-full object-cover"
             src={pageImage}
             alt={pageHeader}
           />
         </div>
-        <p className="p-6">{pageContent}</p>
-        {deployedLink ? (
-          <div className="flex flex-row justify-center w-1/2 h-1/4">
-            <div className="flex flex-col items-center justify-center w-1/2 h-full">
-              {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
-              <a href={githubLink}>{githubLink}</a>
-            </div>
-            <div className="flex flex-col items-center justify-center w-1/2 h-full">
-              {deployedLink ? <h4>Deployed Link:</h4> : <h4></h4>}
+        <p className="p-6" style={{ textIndent: "2em" }}>
+          {pageContent}
+        </p>
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="p-2 m-2" style={{ textAlign: "center" }}>
+            Github Link:
+            <br />
+            <a href={githubLink}>{githubLink}</a>
+          </div>
+          {deployedLink ? (
+            <div className="p-2 m-2" style={{ textAlign: "center" }}>
+              Deployed Link:
+              <br />
               <a href={deployedLink}>{deployedLink}</a>
             </div>
-          </div>
-        ) : (
-          <div className="flex flex-row justify-center w-1/2 h-1/4">
-            <div className="flex flex-col items-center justify-center w-full h-full">
-              {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
-              <a href={githubLink}>{githubLink}</a>
-            </div>
-          </div>
-        )}
+          ) : null}
+        </div>
       </main>
       <Footer />
     </>

@@ -25,12 +25,16 @@ export default function Navbar({ without }: NavbarProps) {
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
   const [projectNames, setProjectNames] = React.useState([]);
+  const [newProjectNames, setNewProjectNames] = React.useState([]);
+
   React.useEffect(() => {
     fetch("/projects.json")
       .then((response) => response.json())
-      .then((data) =>
-        setProjectNames(data.map((item: { name: string }) => item.name))
-      );
+      .then((data) => {
+        const newProjects = data.filter((item: { new: boolean }) => item.new);
+        setProjectNames(data.map((item: { name: string }) => item.name));
+        setNewProjectNames(newProjects.map((item: { name: string }) => item.name));
+      });
   }, []);
 
   return (
@@ -64,7 +68,11 @@ export default function Navbar({ without }: NavbarProps) {
             {projectNames.map((project, index) => (
               <li key={index} className={without === project ? "disabled" : ""}>
                 <Link href={`/projects/${project}`}>
-                  <p>{project}</p>
+                  <p>
+                    {newProjectNames.includes(project)
+                      ? <div>{project}⠀<span className="badge">New</span></div>
+                      : project}
+                  </p>
                 </Link>
               </li>
             ))}
