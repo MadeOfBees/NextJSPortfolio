@@ -3,9 +3,11 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Navbar from "../../Components/navbar";
 import Footer from "../../Components/footer";
+import projectsData from "../../../public/projects.json";
 
 const ProjectPage = () => {
   const idString = useRouter().query.id as string;
+  const project = projectsData.find((item) => item.name === idString);
   const [pageHeader, setPageHeader] = React.useState("");
   const [pageContent, setPageContent] = React.useState("");
   const [pageImage, setPageImage] = React.useState("");
@@ -13,23 +15,15 @@ const ProjectPage = () => {
   const [deployedLink, setDeployedLink] = React.useState("");
 
   React.useEffect(() => {
-    fetch("/projects.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const project = data.find(
-          (item: { name: string }) => item.name === idString
-        );
-        if (project) {
-          setPageHeader(project.name);
-          setPageContent(project.pageContent);
-          setPageImage(project.image);
-          setGithubLink(project.githubLink);
-          setDeployedLink(project.deployedLink);
-        } else {
-          return;
-        }
-      });
-  }, [idString]);
+    if (!project) return;
+    setPageHeader(project.name);
+    setPageContent(project.pageContent);
+    setPageImage(project.image);
+    setGithubLink(project.githubLink);
+    if (project.deployedLink) {
+      setDeployedLink(project.deployedLink);
+    }
+  }, [project]);
 
   return (
     <>
@@ -51,16 +45,16 @@ const ProjectPage = () => {
         </div>
         <p className="p-6">{pageContent}</p>
         {deployedLink ? (
-        <div className="flex flex-row justify-center w-1/2 h-1/4">
-          <div className="flex flex-col items-center justify-center w-1/2 h-full">
-            {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
-            <a href={githubLink}>{githubLink}</a>
+          <div className="flex flex-row justify-center w-1/2 h-1/4">
+            <div className="flex flex-col items-center justify-center w-1/2 h-full">
+              {githubLink ? <h4>Github Link:</h4> : <h4></h4>}
+              <a href={githubLink}>{githubLink}</a>
+            </div>
+            <div className="flex flex-col items-center justify-center w-1/2 h-full">
+              {deployedLink ? <h4>Deployed Link:</h4> : <h4></h4>}
+              <a href={deployedLink}>{deployedLink}</a>
+            </div>
           </div>
-          <div className="flex flex-col items-center justify-center w-1/2 h-full">
-            {deployedLink ? <h4>Deployed Link:</h4> : <h4></h4>}
-            <a href={deployedLink}>{deployedLink}</a>
-          </div>
-        </div>
         ) : (
           <div className="flex flex-row justify-center w-1/2 h-1/4">
             <div className="flex flex-col items-center justify-center w-full h-full">
