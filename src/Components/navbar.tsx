@@ -33,7 +33,9 @@ export default function Navbar({ without }: NavbarProps) {
       .then((data) => {
         const newProjects = data.filter((item: { new: boolean }) => item.new);
         setProjectNames(data.map((item: { name: string }) => item.name));
-        setNewProjectNames(newProjects.map((item: { name: string }) => item.name));
+        setNewProjectNames(
+          newProjects.map((item: { name: string }) => item.name)
+        );
       });
   }, []);
 
@@ -69,9 +71,13 @@ export default function Navbar({ without }: NavbarProps) {
               <li key={index} className={without === project ? "disabled" : ""}>
                 <Link href={`/projects/${project}`}>
                   <p>
-                    {newProjectNames.includes(project)
-                      ? <div>{project}⠀<span className="badge">New</span></div>
-                      : project}
+                    {newProjectNames.includes(project) ? (
+                      <div>
+                        {project}⠀<span className="badge">New</span>
+                      </div>
+                    ) : (
+                      project
+                    )}
                   </p>
                 </Link>
               </li>
