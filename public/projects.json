@@ -2,34 +2,34 @@
     {
         "name": "Daily-Global-Sudoku",
         "pageContent" : "A Sudoku game that updates daily with a new puzzle automatically using a server and a MongoDB database, deployed using Heroku. The game is built using React and styled using MUI. The game has a leaderboard to compare scores with friends and more",
-        "image": "https://user-images.githubusercontent.com/9198297/216781602-14756b53-1e43-4918-ad5a-bac6f415adac.jpg",
+        "image": "Daily-Global-Sudoku.jpg",
         "githubLink": "https://github.com/MadeOfBees/DailySudoku/",
         "deployedLink": "https://daily-global-sudoku.herokuapp.com/"
     },
     {
         "name": "ReactJack",
         "pageContent" : "A JavaScript port of the classic card game blackjack, built using the React framework and Material UI.",
-        "image": "https://user-images.githubusercontent.com/9198297/206930573-13160971-c214-4849-8241-8aa055387f3d.jpg",
+        "image": "ReactJack.jpg",
         "githubLink": "https://github.com/MadeOfBees/ReactJack",
         "deployedLink": "https://madeofbees.github.io/ReactJack/"
     },
     {
         "name": "JShutTheBox",
         "pageContent" : "A simple javascript port of the classic game Shut The Box, made with materialUI and React.",
-        "image": "https://user-images.githubusercontent.com/9198297/210190277-c7da86d5-41df-4243-8634-706f7b4ba912.PNG",
+        "image": "JShutTheBox.jpg",
         "githubLink": "https://github.com/MadeOfBees/JShutTheBox",
         "deployedLink": "https://madeofbees.github.io/JShutTheBox/"
     },
     {
         "name":"SQLStore",
         "pageContent":"A simplestorefront backend made with Sequelize/MySql, Express and NodeJS. No front end, just a REST API.",
-        "image":"https://user-images.githubusercontent.com/9198297/201371225-a8b36224-6e2c-43a3-b66f-da3140a7a096.jpg",
+        "image":"SQLStore.jpg",
         "githubLink":"https://github.com/MadeOfBees/SQLStore"
     },
     {
         "name":"Rouletteo",
         "pageContent":"Just input a .xlsx file and we'll pick a random row for you. Made with React and MaterialUI.",
-        "image":"https://user-images.githubusercontent.com/9198297/216784342-5b7b516f-db80-47d9-ae89-cd7d88212dc4.jpg",
+        "image":"Rouletteo.jpg",
         "githubLink":"https://github.com/MadeOfBees/Rouletteo",
         "deployedLink":"https://madeofbees.github.io/Rouletteo/"
     }
