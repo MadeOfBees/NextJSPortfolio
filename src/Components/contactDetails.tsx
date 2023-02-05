@@ -9,7 +9,7 @@ export default function ContactDetails() {
         <a
           href="mailto:imMadeOfBees@gmail.com"
           target="_blank"
-          className="text-blue-500"
+          className="link link-primary"
         >
           ImMadeOfBees@gmail.com
         </a>
@@ -19,7 +19,7 @@ export default function ContactDetails() {
         <a
           href="http://www.linkedin.com/in/MadeOfBees"
           target="_blank"
-          className="text-blue-500"
+          className="link link-primary"
         >
           linkedin.com/in/MadeOfBees
         </a>
@@ -29,7 +29,7 @@ export default function ContactDetails() {
         <a
           href="http://www.github.com/MadeOfBees"
           target="_blank"
-          className="text-blue-500"
+          className="link link-primary"
         >
           github.com/MadeOfBees
         </a>

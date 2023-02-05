@@ -23,7 +23,7 @@ const ProjectPage = () => {
     project.githubLink
       ? setGithubLink(project.githubLink)
       : setGithubLink("https://github.com/MadeOfBees");
-    project.deployedLink ? setDeployedLink(project.deployedLink) : null;
+    project.deployedLink ? setDeployedLink(project.deployedLink) : setDeployedLink("");
     setPageImage(`/images/${project.image}`);
   }, [project]);
 
