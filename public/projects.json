@@ -1,5 +1,12 @@
 [
     {
+        "name":"Fighting-Time",
+        "pageContent":"Coming soon!",
+        "image":"Upcoming-game.jpg",
+        "githubLink":"hhttps://github.com/MadeOfBees/fighting-time",
+        "new" : true
+    },
+    {
         "name": "Daily-Global-Sudoku",
         "pageContent" : "Daily Global Sudoku is a modern port of the classic game Sudoku. The game is built using the popular JavaScript library React, which provides a seamless and fast-paced gaming experience. The game's sleek and polished look is achieved through the use of Material-UI, a popular styling library. The game's daily puzzle update feature, powered by a server and a MongoDB database, ensures that players are never bored and can enjoy a fresh and challenging puzzle every day. Deployed on the Heroku cloud platform, the game offers high availability and scalability, ensuring that users can access the game anytime and anywhere. The game also features a leaderboard where players can compare their scores with their friends and add an element of competition to the game. Whether you are a fan of the classic game of Sudoku or are just looking for a new and challenging puzzle, then try out Daily Global Sudoku today!",
         "image": "Daily-Global-Sudoku.jpg",
@@ -36,7 +43,7 @@
     {
         "name":"Shelter",
         "pageContent":"A game I'm working on that's still in the early stages. Using the full MERN stack, with a MongoDB database, Express server, React/NextJS/Tailwind/DasiyUI front end and NodeJS backend.",
-        "image":"Upcoming-survival-game.jpg",
+        "image":"Upcoming-game.jpg",
         "githubLink":"https://github.com/MadeOfBees/Shelter",
         "new" : true
     }
