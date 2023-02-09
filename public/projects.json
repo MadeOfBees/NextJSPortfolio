@@ -1,9 +1,9 @@
 [
     {
-        "name":"Fighting-Time",
+        "name":"TSTetris",
         "pageContent":"Coming soon!",
         "image":"Upcoming-game.jpg",
-        "githubLink":"hhttps://github.com/MadeOfBees/fighting-time",
+        "githubLink":"https://github.com/MadeOfBees",
         "new" : true
     },
     {
@@ -41,10 +41,10 @@
         "deployedLink":"https://madeofbees.github.io/Rouletteo/"
     },
     {
-        "name":"Shelter",
-        "pageContent":"A game I'm working on that's still in the early stages. Using the full MERN stack, with a MongoDB database, Express server, React/NextJS/Tailwind/DasiyUI front end and NodeJS backend.",
+        "name":"Fighting-Time",
+        "pageContent":"Coming soon!",
         "image":"Upcoming-game.jpg",
-        "githubLink":"https://github.com/MadeOfBees/Shelter",
+        "githubLink":"https://github.com/MadeOfBees/fighting-time",
         "new" : true
     }
 ]
