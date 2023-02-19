@@ -1,7 +1,7 @@
 [
     {
         "name":"TSTetris",
-        "pageContent":"Coming soon!",
+        "pageContent":"A nextJS, Tailwind, and Typescript port of the classic game Tetris.",
         "image":"Upcoming-game.jpg",
         "githubLink":"https://github.com/MadeOfBees",
         "new" : true
