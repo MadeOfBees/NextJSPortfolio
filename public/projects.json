@@ -2,8 +2,9 @@
     {
         "name":"TSTetris",
         "pageContent":"A nextJS, Tailwind, and Typescript port of the classic game Tetris.",
-        "image":"Upcoming-game.jpg",
-        "githubLink":"https://github.com/MadeOfBees",
+        "image":"Tetris.jpg",
+        "githubLink":"https://github.com/MadeOfBees/typescript-tetris",
+        "deployedLink":"tstetris.herokuapp.com/",
         "new" : true
     },
     {
