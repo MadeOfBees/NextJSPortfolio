@@ -1,7 +1,7 @@
 [
     {
         "name":"TSTetris",
-        "pageContent":"A nextJS, Tailwind, and Typescript port of the classic game Tetris.",
+        "pageContent":"The classic game of Tetris for the NES but made using NextJS, Tailwind, and Typescript, fully functioning leaderboards, customizable boards, and more! This project was a great learning experience for me, and really helped me understand NextJS and Typescript a lot better. I also learned a lot about how to use Tailwind, and I'm really happy with how the site turned out. I hope you enjoy playing it as much as I enjoyed making it!",
         "image":"Tetris.jpg",
         "githubLink":"https://github.com/MadeOfBees/typescript-tetris",
         "deployedLink":"http://nextetris.herokuapp.com/",
@@ -23,7 +23,7 @@
     },
     {
         "name": "JShutTheBox",
-        "pageContent" : "A simple javascript port of the classic game Shut The Box, made with materialUI and React.",
+        "pageContent" : "A simple javascript port of the classic game Shut The Box, made with materialUI and React, the game supports up to 12 players or can be played alone in either light or dark mode. The game is also fully responsive, so you can play it on your phone, tablet or desktop, if you don't know the rules already that's okay, just check out the rules page on the bottom nav bar.",
         "image": "JShutTheBox.jpg",
         "githubLink": "https://github.com/MadeOfBees/JShutTheBox",
         "deployedLink": "https://madeofbees.github.io/JShutTheBox/"
@@ -36,7 +36,7 @@
     },
     {
         "name":"Rouletteo",
-        "pageContent":"Just input a .xlsx file and we'll pick a random row for you. Made with React and MaterialUI.",
+        "pageContent":"Just input a .xlsx file and we'll pick a random row for you. Made with React and MaterialUI, this was mainly a lesson in learning a random NPM package I found to help me get things done easier. I made this project by my Dad's request so technically this was my first project for a client. I hope you enjoy it!",
         "image":"Rouletteo.jpg",
         "githubLink":"https://github.com/MadeOfBees/Rouletteo",
         "deployedLink":"https://madeofbees.github.io/Rouletteo/"

@@ -23,20 +23,20 @@ export default function Home() {
       <Navbar />
       <main>
         <h1 className="text-5xl font-bold text-center">
-          Good {greetings()}, I'm Bee, welcome to my Portfolio!
+          Good {greetings()}, I'm Ben, welcome to my Portfolio!
         </h1>
         <p className="p-6" style={{ textIndent: "2em" }}>
           I'm a Full Stack Web Developer with a background mostly outside of the
-          tech industry. I'm currently working on my portfolio and learning new
-          technologies. I'm looking for a position where I can continue to learn
-          and grow as a developer. My only real experience before this was with
-          some Doom modding when I was younger and some fairly limited UDK3/4
-          work. I've always got a few projects in the works so make sure to
-          check back often to see what I've been working on, or check out my
-          Github! I'm also open to any suggestions or feedback you might have,
-          so feel free to reach out! As a thank you for reading this far i'll
-          let you know a secret about the site, try clicking my name up on the
-          navbar!
+          tech industry so far although I've had an intrest in computers (both
+          hardware and software) for as long as I can remember. I'm currently
+          working on my portfolio, personal projects and learning new
+          technologies and languages. I'm currently looking for a position where
+          I can continue to hone my skillset in this space and learn new things.
+          I've always got a few projects in the works so make sure to check back
+          often to see what I've been working on, or check out my Github! I'm
+          also open to any suggestions or feedback you might have, so feel free
+          to reach out! As a thank you for reading this far i'll let you know a
+          secret about the site, try clicking my name up on the navbar!
         </p>
       </main>
       <Footer />
