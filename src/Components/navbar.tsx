@@ -36,10 +36,10 @@ export default function Navbar({ without }: NavbarProps) {
         </button>
       )}
       <button>
-        <span className="btm-nav-label">Warnings</span>
+        <span className="btm-nav-label">Projects</span>
       </button>
       <button>
-        <span className="btm-nav-label">Statics</span>
+        <span className="btm-nav-label">Contact Me</span>
       </button>
     </nav>
   );
