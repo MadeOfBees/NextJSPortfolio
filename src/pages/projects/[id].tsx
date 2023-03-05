@@ -1,12 +1,11 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter, NextRouter } from "next/router";
 import Head from "next/head";
 import Navbar from "../../Components/navbar";
-import projectsData from "../../../public/projects.json";
 
 const ProjectPage = () => {
-  const idString = useRouter().query.id as string;
-  const project = projectsData.find((item) => item.name === idString);
+  const router: NextRouter = useRouter();
+  const idString: string = router.query.id as string;
   const [pageHeader, setPageHeader] = React.useState("");
   const [pageContent, setPageContent] = React.useState("");
   const [pageImage, setPageImage] = React.useState("");
@@ -14,19 +13,27 @@ const ProjectPage = () => {
   const [deployedLink, setDeployedLink] = React.useState("");
 
   React.useEffect(() => {
-    if (!project) return;
-    setPageHeader(project.name);
-    project.pageContent
-      ? setPageContent(project.pageContent)
-      : setPageContent("");
-    project.githubLink
-      ? setGithubLink(project.githubLink)
-      : setGithubLink("https://github.com/MadeOfBees");
-    project.deployedLink
-      ? setDeployedLink(project.deployedLink)
-      : setDeployedLink("");
-    setPageImage(`/images/${project.image}`);
-  }, [project]);
+    if (idString === undefined) return;
+    fetchProject();
+  }, [idString]);
+
+  const fetchProject = async () => {
+    setPageHeader(idString);
+    fetch(`/api/projects/populatePage`, {
+      method: "POST",
+      body: JSON.stringify({ name: idString }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPageContent(data.project.pageContent);
+        setPageImage(`/images/${data.project.image}`);
+        setGithubLink(data.project.githubLink);
+        setDeployedLink(data.project.deployedLink);
+      });
+  };
 
   return (
     <>

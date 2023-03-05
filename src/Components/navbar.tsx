@@ -20,7 +20,6 @@ export default function Navbar({ without }: NavbarProps) {
         );
       });
   }, []);
-  console.log(without);
 
   return (
     <nav className="btm-nav">
