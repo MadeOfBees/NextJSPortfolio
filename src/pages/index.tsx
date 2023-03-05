@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navbar from "../Components/navbar";
-import Footer from "../Components/footer";
 
 export default function Home() {
   function greetings() {
@@ -20,7 +19,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
       <main>
         <h1 className="text-5xl font-bold text-center">
           Good {greetings()}, I'm Ben, welcome to my Portfolio!
@@ -39,7 +37,7 @@ export default function Home() {
           secret about the site, try clicking my name up on the navbar!
         </p>
       </main>
-      <Footer />
+      <Navbar without="home" />
     </>
   );
 }

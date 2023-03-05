@@ -2,7 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Navbar from "../../Components/navbar";
-import Footer from "../../Components/footer";
 import projectsData from "../../../public/projects.json";
 
 const ProjectPage = () => {
@@ -37,7 +36,6 @@ const ProjectPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar without={idString} />
       <main className="flex flex-col items-center justify-center mb-20">
         <h1 className="text-5xl font-bold text-center mb-8">{pageHeader}</h1>
         <div
@@ -68,7 +66,7 @@ const ProjectPage = () => {
           ) : null}
         </div>
       </main>
-      <Footer />
+      <Navbar without={idString} />
     </>
   );
 };
