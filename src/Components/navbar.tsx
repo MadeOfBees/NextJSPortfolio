@@ -32,11 +32,9 @@ export default function Navbar({ without }: NavbarProps) {
   return (
     <nav className="btm-nav bg-base-300">
       {without !== "home" ? (
-        <button>
           <Link href="/">
             <span className="btm-nav-label">Home</span>
           </Link>
-        </button>
       ) : (
         <span className="btm-nav-label font-bold">Home</span>
       )}
