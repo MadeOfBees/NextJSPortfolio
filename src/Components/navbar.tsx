@@ -21,7 +21,6 @@ export default function Navbar({ without }: NavbarProps) {
         .map((project: { name: string }) => project.name);
       setProjectNames(pageNames);
       setNewProjectNames(newPageNames);
-      console.log("pageNames", pageNames);
     }
   };
 

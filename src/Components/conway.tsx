@@ -6,15 +6,14 @@ interface prop {
 
 export default function Conway ({ isMobile }: prop): JSX.Element {
   let boardWidth = 100;
-  const boardHeight = 60;
+  let boardHeight = 60;
   const backgroundColor = "#888888";
   const liveCellColor = "#444444";
   const [board, setBoard] = useState<boolean[][]>([]);
   useEffect(() => {
-    console.log("isMobile", isMobile);
     if (isMobile) {
-      console.log("isMobile");
       boardWidth = 36;
+      boardHeight = 36;
     }
     const newBoard: boolean[][] = [];
     for (let i = 0; i < boardHeight; i++) {

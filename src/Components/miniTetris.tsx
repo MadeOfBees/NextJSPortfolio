@@ -265,7 +265,6 @@ export default function Tetris(): JSX.Element {
     if (clearedLines % 10 === 0 && clearedLines !== 0 && speedDecrease === true) {
       gameSpeed--;
       speedDecrease = false;
-      console.log(gameSpeed);
     }
     return {
       gameNextMino: gameNextMino,
