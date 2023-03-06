@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../Components/navbar";
-import Conway from "../Components/conway";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [resCheck, setResCheck] = useState<boolean>(false);
 
   function greetings() {
     if (new Date().getHours() < 12) {
@@ -16,13 +13,6 @@ export default function Home() {
       return "evening";
     }
   }
-
-  useEffect(() => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-    setResCheck(true);
-  }, []);
 
   return (
     <>
@@ -49,11 +39,6 @@ export default function Home() {
           suggestions or feedback you might have, so feel free to reach out!
         </p>
         <div className="flex justify-center">
-          {resCheck? (
-            <Conway isMobile={isMobile} />
-          ) : (
-            null
-          )}
         </div>
       </main>
       <Navbar without="home" />

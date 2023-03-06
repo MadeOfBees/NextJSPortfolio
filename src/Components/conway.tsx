@@ -4,7 +4,7 @@ interface prop {
   isMobile: boolean;
 }
 
-export default function Conway ({ isMobile }: prop): JSX.Element {
+export default function Conway({ isMobile }: prop): JSX.Element {
   let boardWidth = 100;
   let boardHeight = 60;
   const backgroundColor = "#888888";
