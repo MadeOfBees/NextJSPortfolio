@@ -26,7 +26,7 @@ export default function Home() {
         </h1>
         <p className="p-6" style={{ textIndent: "2em" }}>
           I'm a Full Stack Web Developer with a background mostly outside of the
-          tech industry so far, although I've had an intrest in computers (both
+          tech industry so far, although I've had an interest in computers (both
           hardware and software) for as long as I can remember. I'm currently
           working on my portfolio, personal projects and learning new
           technologies like nextJS, Tailwind and languages like Typescript and

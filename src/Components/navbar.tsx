@@ -38,27 +38,50 @@ export default function Navbar({ without }: NavbarProps) {
           </Link>
         </button>
       ) : (
-        <button disabled>
-          <span className="btm-nav-label">Home</span>
-        </button>
+        <span className="btm-nav-label font-bold">Home</span>
       )}
       <button className="dropdown dropdown-top">
         <label className="btm-nav-label">Projects</label>
-        <ul tabIndex={0} className="dropdown-content menu bg-base-200 w-full">
-          {projectNames.map((projectName: string) => (
+        <ul
+          tabIndex={0}
+          className="dropdown-content menu bg-base-200 w-full text-left"
+        >
+          {projectNames.map((projectName) => (
             <li key={projectName}>
-              <Link href={`/projects/${projectName}`}>
-                <p className="menu-item">{projectName}</p>
-              </Link>
+              {without !== projectName ? (
+                <Link href={`/projects/${projectName}`} className="menu-item">
+                  {newProjectNames.includes(projectName) ? (
+                    <span className="text-base-content text-sm">
+                      {projectName}{" "}
+                      <span className="text-primary">{"⠀New!"}</span>
+                    </span>
+                  ) : (
+                    <span className="text-base-content text-sm">
+                      {projectName}
+                    </span>
+                  )}
+                </Link>
+              ) : (
+                <span className="menu-item font-bold">
+                  {newProjectNames.includes(projectName) ? (
+                    <span className="text-base-content text-sm">
+                      {projectName}{" "}
+                      <span className="text-primary">{"⠀New!"}</span>
+                    </span>
+                  ) : (
+                    <span className="text-base-content text-sm">
+                      {projectName}
+                    </span>
+                  )}
+                </span>
+              )}
             </li>
           ))}
         </ul>
       </button>
-      <button>
-        <label htmlFor="contactModal">
-          <span className="btm-nav-label">Contact</span>
-        </label>
-      </button>
+      <label htmlFor="contactModal">
+        <span className="btm-nav-label">Contact</span>
+      </label>
     </nav>
   );
 }

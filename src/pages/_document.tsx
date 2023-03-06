@@ -1,20 +1,15 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import ContactDetails from "../Components/contactDetails";
+import { Html, Head, Main, NextScript } from 'next/document'
+import Modal from '../Components/modal'
 
-export default function Document() {
+export default function Document(): JSX.Element {
   return (
-    <Html lang="en">
+    <Html lang="en" data-theme="dark">
       <Head />
-      <input type="checkbox" id="contactModal" className="modal-toggle" />
-      <label htmlFor="contactModal" className="modal cursor-pointer">
-        <label className="modal-box relative" htmlFor="contactModal">
-          <ContactDetails />
-        </label>
-      </label>
+      <Modal />
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }
