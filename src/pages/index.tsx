@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../Components/navbar";
 
 export default function Home() {
-  
   function greetings() {
     if (new Date().getHours() < 12) {
       return "morning";
@@ -30,12 +29,12 @@ export default function Home() {
           tech industry so far, although I've had an intrest in computers (both
           hardware and software) for as long as I can remember. I'm currently
           working on my portfolio, personal projects and learning new
-          technologies and languages. I'm currently looking for a position where
-          I can continue to hone my skillset in this space and learn new things.
-          I've always got a few projects in the works so make sure to check back
-          often to see what I've been working on, or check out my Github! I'm
-          also open to any suggestions or feedback you might have, so feel free
-          to reach out!
+          technologies like nextJS, Tailwind and languages like Typescript and
+          PHP. I'm currently looking for a position where I can continue to hone
+          my skillset in this space and learn new things. I've always got a few
+          projects in the works so make sure to check back often to see what
+          I've been working on, or check out my Github! I'm also open to any
+          suggestions or feedback you might have, so feel free to reach out!
         </p>
       </main>
       <Navbar without="home" />
