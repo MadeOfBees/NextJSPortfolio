@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
       <main>
         <h1 className="text-5xl font-bold text-center mt-8">
-          Good {greetings()}, I'm Ben, welcome to my Portfolio!
+          Good {greetings()}! I'm Ben, welcome to my Portfolio!
         </h1>
         <p className="p-6" style={{ textIndent: "2em" }}>
           I'm a Full Stack Web Developer with a background mostly outside of the
