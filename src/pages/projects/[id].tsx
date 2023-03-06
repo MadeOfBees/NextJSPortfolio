@@ -43,7 +43,7 @@ const ProjectPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center justify-center mb-20">
+      <main className="flex flex-col items-center justify-center mb-20 mt-8">
         <h1 className="text-5xl font-bold text-center mb-8">{pageHeader}</h1>
         <div
           className="w-3/4 h-3/4 md:w-1/2 md:h-1/2 lg:w-1/3 lg:h-1/3 xl:w-1/4 xl:h-1/4"

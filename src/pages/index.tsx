@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../Components/navbar";
 
 export default function Home() {
+  
   function greetings() {
     if (new Date().getHours() < 12) {
       return "morning";
@@ -11,6 +12,7 @@ export default function Home() {
       return "evening";
     }
   }
+
   return (
     <>
       <Head>
@@ -20,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-5xl font-bold text-center">
+        <h1 className="text-5xl font-bold text-center mt-8">
           Good {greetings()}, I'm Ben, welcome to my Portfolio!
         </h1>
         <p className="p-6" style={{ textIndent: "2em" }}>
@@ -33,8 +35,7 @@ export default function Home() {
           I've always got a few projects in the works so make sure to check back
           often to see what I've been working on, or check out my Github! I'm
           also open to any suggestions or feedback you might have, so feel free
-          to reach out! As a thank you for reading this far i'll let you know a
-          secret about the site, try clicking my name up on the navbar!
+          to reach out!
         </p>
       </main>
       <Navbar without="home" />
