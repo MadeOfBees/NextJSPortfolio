@@ -3,7 +3,6 @@ import Head from "next/head";
 import Navbar from "../Components/navbar";
 
 export default function Home() {
-
   function greetings() {
     if (new Date().getHours() < 12) {
       return "morning";
@@ -22,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="">
         <h1 className="text-5xl font-bold text-center mt-8">
           Good {greetings()}! I'm Ben, welcome to my Portfolio!
         </h1>
@@ -38,8 +37,7 @@ export default function Home() {
           I've been working on, or check out my Github! I'm also open to any
           suggestions or feedback you might have, so feel free to reach out!
         </p>
-        <div className="flex justify-center">
-        </div>
+        <div className="mb-8">⠀</div>
       </main>
       <Navbar without="home" />
     </>
