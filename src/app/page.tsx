@@ -15,8 +15,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bee's Portfolio</title>
-        <meta name="description" content="Bee's portfolio homepage" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -36,7 +34,6 @@ export default function Home() {
           I've been working on, or check out my Github! I'm also open to any
           suggestions or feedback you might have, so feel free to reach out!
         </p>
-        <div className="mb-8">⠀</div>
       </main>
     </>
   );

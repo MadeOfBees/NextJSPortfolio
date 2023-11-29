@@ -59,7 +59,7 @@ const Satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "bees-portfolio",
+  title: "Made Of Bees",
   description: "Made Of Bees",
 };
 
