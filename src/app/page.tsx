@@ -1,7 +1,10 @@
 "use client";
 import Head from "next/head";
+import { useState, useEffect } from "react";
+import NavBar from "@/Components/navbar";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
   function greetings() {
     if (new Date().getHours() < 12) {
       return "morning";
@@ -12,6 +15,14 @@ export default function Home() {
     }
   }
 
+  const sendEmail = () => {
+    window.open(`mailto:isaud@gmail.com?subject=NewContact!&body=${email}`);
+  };
+
+  useEffect(() => {
+    setEmail(email);
+  }, []);
+
   return (
     <>
       <Head>
@@ -19,21 +30,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-5xl font-bold text-center mt-8">
-          Good {greetings()}! I'm Ben, welcome to my Portfolio!
-        </h1>
-        <p className="p-6" style={{ textIndent: "2em" }}>
-          I'm a Full Stack Web Developer with a background mostly outside of the
-          tech industry so far, although I've had an interest in computers (both
-          hardware and software) for as long as I can remember. I'm currently
-          working on my portfolio, personal projects and learning new
-          technologies like nextJS, Tailwind and languages like Typescript and
-          PHP. I'm currently looking for a position where I can continue to hone
-          my skillset in this space and learn new things. I've always got a few
-          projects in the works so make sure to check back often to see what
-          I've been working on, or check out my Github! I'm also open to any
-          suggestions or feedback you might have, so feel free to reach out!
-        </p>
+        <NavBar />
+        <div className="bg-[#87A878] h-[33rem]">About</div>
+        <div className="bg-[#272A38] h-[33rem]">My Tech Stack</div>
+        <div className="bg-white h-[25rem]">Projects</div>
+        <div className="bg-[#272A38] h-[33rem]">Contact</div>
       </main>
     </>
   );
