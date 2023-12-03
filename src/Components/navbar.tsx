@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { LuMailPlus } from "react-icons/lu";
 import { useState, useEffect, Fragment } from "react";
@@ -7,12 +8,48 @@ export default function NavBar() {
   const [currentSearch, setCurrentSearch] = useState("Home");
   const navArray = ["Home", "About", "Projects"];
   const projectsArray = ["Daily Sudoku", "Fretboard Quiz", "Blackjack"];
+  
+  const [innerWidth, setInnerWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   const navClasser = (num: number) => {
     if (navArray[num] === currentSearch) {
       return "mr-4 border-b-2 border-[#FFA500]";
     }
     return "mr-4";
+  };
+
+  const checkMobile = () => {
+    if (innerWidth > 525) {
+      return (
+        <div className="items-center space-x-6 rtl:space-x-reverse">
+          <button className="flex items-center justify-center text-normal bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[11.5rem]">
+            <LuMailPlus className="mr-2" />
+            Work with me
+          </button>
+        </div>
+      );
+    }
+    return (
+      <div className="absolute right-[1rem]">
+        <button className="flex items-center justify-center text-white bg-[#313445] hover:bg-[#42465d] rounded h-[2.2rem] w-[2.2rem]">
+          <LuMailPlus />
+        </button>
+      </div>
+    );
   };
 
   return (
@@ -42,12 +79,7 @@ export default function NavBar() {
           </Transition>
         </Menu>
       </nav>
-      <div className="flex items-center space-x-6 rtl:space-x-reverse">
-        <button className="flex items-center justify-center text-normal bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[12.5rem]">
-          <LuMailPlus className="mr-2" />
-          Work With Me
-        </button>
-      </div>
+      {checkMobile()}
     </header>
   );
 }
