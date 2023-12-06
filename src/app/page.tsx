@@ -2,7 +2,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import NavBar from "@/Components/navbar";
-import { LuMailPlus } from "react-icons/lu";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -23,27 +22,18 @@ export default function Home() {
       </Head>
       <main className="w-[100vw]">
         <NavBar />
-        <div className="bg-[#87A878] px-[2rem] min-h-[33rem]">
-          <div className="py-[4rem] md:px-[6.3rem] grid grid-cols-3">
-            <div className="col-start-1 col-span-2 flex-col space-y-[4rem] flex justify-center my-auto">
-              <h1 className="text-5xl font-bold text-white">Hi, I'm Bee.</h1>
-              <h2 className="text-xl font-semibold text-white">
-                A Full Stack Web Developer with a flair for turning complex
-                problems into elegant, user-friendly solutions. My journey in
-                tech is peppered with unique experiences that fuel my innovative
-                approach to web development.
-              </h2>
-              <button className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem]">
-                <LuMailPlus className="mr-2" />
-                Work with me
-              </button>
-            </div>
-            <div className="col-start-3 col-span-1">
-              <div className="hidden md:block">
-                <img src="/images/pfp.png" alt="Photo of Bee" />
-              </div>
-            </div>
-          </div>
+        <div className="bg-[#87A878] px-[4.9rem] py-[4.4rem] min-h-[33rem] justify-start">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white">
+            Hi, I'm Bee.
+          </h1>
+          <div className="h-[0.1rem] bg-white mt-4"></div>
+          <p className="text-2xl sm:text-3xl text-white mt-4 max-w-[33rem] py-[5rem] font-light">
+            A Full Stack Web Developer with a flair for turning complex problems
+            into elegant, user-friendly solutions. My journey in tech is
+            peppered with unique experiences that fuel my innovative approach to
+            web development.
+          </p>
+          <div className="absolute right-[4rem] top-[21rem] w-[25rem] h-[25rem] bg-white rounded-full hidden lg:block"></div>
         </div>
         <div className="bg-[#272A38] flex flex-col text-white justify-center items-stretch">
           <div className="justify-center px-16 py-12 max-md:px-5">

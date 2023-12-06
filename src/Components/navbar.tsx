@@ -1,15 +1,17 @@
+"use client";
+
 import React from "react";
 import { LuMailPlus, LuMenu } from "react-icons/lu";
 import { useState, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function navbar() {
-  const [currentSearch, setCurrentSearch] = useState("Home");
-  const navArray = ["Home", "About", "Projects"];
+  const [currentSearch, setCurrentSearch] = useState("home");
   const projectsArray = ["Daily Sudoku", "Fretboard Quiz", "Blackjack"];
 
-  const underlineMainRoute = (num: number) => {
-    if (navArray[num] === currentSearch) {
+  const homeUnderlined = (page: string) => {
+    if (page === currentSearch) {
       return "mr-4 border-b-2 border-[#FFA500]";
     }
     return "mr-4";
@@ -20,10 +22,9 @@ export default function navbar() {
       <div className="flex justify-between items-center mx-auto p-4 text-xl fixed w-full z-20 top-0 start-0 bg-white border-b border-[#000000] border-opacity-20 h-[4.7rem]">
         <nav className="hidden md:block items-center ml-4">
           <button className="mr-8 ml-12">Logo</button>
-          <button className={underlineMainRoute(0)}>Home</button>
-          <button className={underlineMainRoute(1)}>About</button>
+          <button className={homeUnderlined("home")}>Home</button>
           <Menu>
-            <Menu.Button className={underlineMainRoute(2)}>
+            <Menu.Button className={homeUnderlined("projects")}>
               Projects
             </Menu.Button>
             <Transition
@@ -35,7 +36,7 @@ export default function navbar() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute top-[3.6rem] left-[18.2rem] w-[9rem] bg-white shadow focus:outline-none border border-[#313445] border-opacity-20">
+              <Menu.Items className="absolute top-[3.6rem] left-[14rem] rounded-[.6rem] px-[2rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED]">
                 {projectsArray.map((project) => (
                   <Menu.Item as="div" key={project}>
                     {project}
@@ -47,31 +48,53 @@ export default function navbar() {
         </nav>
         <div className="md:hidden ml-4">
           <Menu>
-            <Menu.Button className="flex ring-2 ring-[#000000] rounded h-[2.2rem] w-[2.2rem] justify-center items-center">
+            <Menu.Button className="flex ring-2 ring-[#313445] rounded h-[2.2rem] w-[2.2rem] justify-center items-center">
               <LuMenu />
             </Menu.Button>
-            <Menu.Items className="absolute top-[3.6rem] w-[9rem] rounded-sm bg-white shadow focus:outline-none border border-[#313445] border-opacity-20">
-              <Menu.Item as="div" key="Home">
-                Home
-              </Menu.Item>
-              <Menu.Item as="div" key="About">
-                About
-              </Menu.Item>
-              <Menu.Items as="div" key="Projects">
-                <Menu>
-                  <Menu.Button className="focus:outline-none">
-                    Projects
-                  </Menu.Button>
-                  <Menu.Items className="">
-                    {projectsArray.map((project) => (
-                      <Menu.Item as="div" key={project}>
-                        {project}
-                      </Menu.Item>
-                    ))}
-                  </Menu.Items>
-                </Menu>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="absolute top-[3.8rem] rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED]">
+                <Menu.Item as="div" key="Home">
+                  Home
+                </Menu.Item>
+                <Menu.Items as="div" key="Projects">
+                  <Menu>
+                    <Menu.Button className="focus:outline-none flex items-center">
+                      Projects
+                      <IoIosArrowDown className="ml-[.5rem] mt-[.3rem]" />
+                    </Menu.Button>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items className="absolute rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] sm:top-[2.5rem] sm:left-[8.45rem] left-[2.5rem] top-[5.6rem]">
+                        {projectsArray.map((project) => (
+                          <Menu.Item
+                            as="div"
+                            key={project}
+                            className="whitespace-nowrap"
+                          >
+                            {project}
+                          </Menu.Item>
+                        ))}
+                      </Menu.Items>
+                    </Transition>
+                  </Menu>
+                </Menu.Items>
               </Menu.Items>
-            </Menu.Items>
+            </Transition>
           </Menu>
         </div>
         <div className="md:hidden">
