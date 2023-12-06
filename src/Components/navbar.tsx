@@ -36,7 +36,7 @@ export default function navbar() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute top-[3.6rem] left-[14rem] rounded-[.6rem] px-[2rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED]">
+              <Menu.Items className="absolute top-[3.6rem] left-[14rem] rounded-[.6rem] px-[2rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] opacity-90">
                 {projectsArray.map((project) => (
                   <Menu.Item as="div" key={project}>
                     {project}
@@ -60,7 +60,7 @@ export default function navbar() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute top-[3.8rem] rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED]">
+              <Menu.Items className="absolute top-[3.8rem] rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] opacity-90">
                 <Menu.Item as="div" key="Home">
                   Home
                 </Menu.Item>
@@ -79,7 +79,7 @@ export default function navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] sm:top-[2.5rem] sm:left-[8.45rem] left-[2.5rem] top-[5.6rem]">
+                      <Menu.Items className="absolute rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] sm:top-[2.5rem] sm:left-[8.45rem] left-0 top-[5.6rem] opacity-90">
                         {projectsArray.map((project) => (
                           <Menu.Item
                             as="div"

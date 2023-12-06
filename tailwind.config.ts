@@ -7,6 +7,12 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '720px',
+      lg: '1080px',
+      xl: '1440px',
+    },
     extend: {
       fontFamily: {
         satoshi: [`var(--font-satoshi)`],
