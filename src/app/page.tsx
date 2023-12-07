@@ -2,6 +2,8 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import NavBar from "@/Components/navbar";
+import { LuMailPlus } from "react-icons/lu";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -35,7 +37,7 @@ export default function Home() {
           </p>
           <div className="absolute right-[4rem] top-[21rem] w-[25rem] h-[25rem] bg-white rounded-full hidden lg:block"></div>
         </div>
-        <div className="bg-[#272A38] flex flex-col text-white justify-center items-stretch">
+        <div className="bg-[#272A38] flex flex-col text-white justify-center min-h-[40rem]">
           <div className="justify-center px-16 py-12 max-md:px-5">
             <div className="text-center text-5xl font-bold max-md:text-4xl ">
               My tech stack
@@ -87,6 +89,33 @@ export default function Home() {
               <p>Img3</p>
               <p>Img4</p>
               <p>Img5</p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white min-h-[27rem]">
+          <div className="px-[5rem] py-[3rem] text-2xl font-bold">
+            My favorite projects
+            <div className="bg-[#455555] w-full h-[20rem] mt-[3rem] rounded-lg"></div>
+          </div>
+        </div>
+        <div className="flex-col flex text-white min-h-[48rem] text-center items-center bg-blue-500 justify-around">
+          <div className="flex flex-col items-center space-y-10 max-w-[65rem]">
+            <div className="text-5xl font-bold max-md:text-4xl">
+              Born and raised in Atlanta
+            </div>
+            <div className="text-2xl sm:text-3xl max-md:mt-5">
+              Whether it's a state-of-the-art web app or an inventive new game,
+              I'm here to help turn ideas into digital realities, especially if
+              you're based in Atlanta!
+            </div>
+            <button className="flex items-center justify-center bg-[#87A878] hover:bg-[#9ebd90] text-white px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem] text-xl">
+              <LuMailPlus className="mr-2" />
+              Work with me
+            </button>
+            <div className="flex md:text-3xl text-2xl">Socials</div>
+            <div className="flex items-center text-5xl">
+              <FaGithub />
+              <FaLinkedin />
             </div>
           </div>
         </div>
