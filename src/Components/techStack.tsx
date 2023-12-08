@@ -31,14 +31,36 @@ export default function techStack() {
 
   const [currentStack, setCurrentStack] = useState<techStack>(techStacks[0]);
 
+  const stackUnderline = (stack: techStack) => {
+    if (stack.name === currentStack.name) {
+      return <div className="w-full h-[0.2rem] bg-white mt-2"></div>;
+    }
+    return <div className="w-full h-[0.2rem] mt-2"></div>;
+  };
+
+  const stackItalicizer = (stack: techStack) => {
+    if (stack.name === currentStack.name) {
+      return "text-2xl font-bold leading-8 italic";
+    }
+    return "text-2xl font-bold leading-8";
+  };
+
   const stackBlock = () => {
     return techStacks.map((stack) => (
-      <div className="flex flex-col items-stretch w-[34%] max-md:w-full max-md:ml-0" key={stack.name + "MAINDIV"}>
-        <div className="items-stretch flex flex-col pr-2 max-md:mt-10" key={stack.name + "FlexDIV"}>
-          <div className="text-2xl font-bold leading-8" key={stack.name}>
+      <div
+        className="flex flex-col items-stretch w-[34%] max-md:w-full max-md:ml-0"
+        key={stack.name + "MainDiv"}
+        onClick={() => setCurrentStack(stack)}
+      >
+        <div
+          className="items-stretch flex flex-col pr-2 max-md:mt-10"
+          key={stack.name + "FlexDiv"}
+        >
+          <div className={stackItalicizer(stack)} key={stack.name}>
             {stack.name}
           </div>
-          <div className="leading-7 mt-5" key={stack.description}>
+          {stackUnderline(stack)}
+          <div className="leading-7 mt-5" key={stack.name + "Description"}>
             {stack.description}
           </div>
         </div>
@@ -48,16 +70,23 @@ export default function techStack() {
 
   return (
     <div>
-      <div className="mt-12 max-md:max-w-full max-md:mt-10" key="MainDivOfTechStack">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0" key="FlexDivOfTechStack">
+      <div
+        className="mt-12 max-md:max-w-full max-md:mt-10"
+        key="MainDivOfTechStack"
+      >
+        <div
+          className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+          key="FlexDivOfTechStack"
+        >
           {stackBlock()}
         </div>
       </div>
-      <div className="items-start flex max-w-full justify-between gap-5 mt-8 max-md:flex-wrap max-md:justify-center" key={currentStack.name + "Images"}>
-        {currentStack.images.map((image) => (
-          <div className="w-[20%] max-md:w-[40%] max-md:mt-10" key={image + "Image"}>
-            {image}
-          </div>
+      <div
+        className="flex justify-center gap-[8rem] mt-[6rem] max-md:flex-wrap"
+        key="GridDivOfTechStack"
+      >
+        {currentStack.images.map((img) => (
+          <div key={img}>{img}</div>
         ))}
       </div>
     </div>
