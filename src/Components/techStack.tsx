@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function techStack() {
+export default function TechStack() {
   type techStack = {
     name: string;
     description?: string;
