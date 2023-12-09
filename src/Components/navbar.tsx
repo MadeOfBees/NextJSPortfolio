@@ -6,7 +6,11 @@ import { useState, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { IoIosArrowDown } from "react-icons/io";
 
-export default function navbar() {
+type Props = {
+  setIsOpen: (isOpen: boolean) => void;
+};
+
+export default function navbar({ setIsOpen }: Props) {
   const [currentSearch, setCurrentSearch] = useState("home");
   const projectsArray = ["Daily Sudoku", "Fretboard Quiz", "Blackjack"];
 
@@ -102,12 +106,15 @@ export default function navbar() {
         </div>
         <div className="items-center space-x-6 rtl:space-x-revers flex md:order-2">
           <div className="items-center space-x-1 rtl:space-x-reverse md:hidden mr-4">
-            <button className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white rounded h-[2.2rem] w-[2.2rem]">
+            <button className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white rounded h-[2.2rem] w-[2.2rem]" onClick={() => setIsOpen(true)}>
               <LuMailPlus />
             </button>
           </div>
           <div className="relative hidden md:block space-x-1 rtl:space-x-reverse">
-            <button className="mr-12 flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem]">
+            <button
+              className="mr-12 flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem]"
+              onClick={() => setIsOpen(true)}
+            >
               <LuMailPlus className="mr-2" />
               Work with me
             </button>
