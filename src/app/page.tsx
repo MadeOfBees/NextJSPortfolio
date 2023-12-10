@@ -44,7 +44,7 @@ export default function Home() {
       <div className="bg-white min-h-[27rem]">
         <div className="px-[5rem] py-[3rem] text-2xl font-bold">
           My favorite projects
-          <div className="bg-[#455555] w-full h-[20rem] mt-[3rem] rounded-lg">
+          <div className="w-full h-[20rem] mt-[3rem] rounded-lg">
             <ProjectsCarousel />
           </div>
         </div>
