@@ -9,7 +9,7 @@ import ContactModal from "@/Components/contactModal";
 import { useState } from "react";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <main className="w-[100vw]">
@@ -44,9 +44,9 @@ export default function Home() {
       <div className="bg-white min-h-[27rem]">
         <div className="px-[5rem] py-[3rem] text-2xl font-bold">
           My favorite projects
-          <div className="w-full h-[20rem] mt-[3rem] rounded-lg">
-            <ProjectsCarousel />
-          </div>
+        </div>
+        <div className="w-full h-[20rem] mt-[3rem] rounded-lg">
+          <ProjectsCarousel />
         </div>
       </div>
       <div className="flex-col flex text-white min-h-[48.6rem] text-center items-center justify-around bg-atl bg-cover">

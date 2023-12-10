@@ -6,15 +6,15 @@ export default function ProjectsCarousel() {
   const responsive = {
     desktop: {
       breakpoint: { max: 9001, min: 1250 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1250, min: 980 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 980, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
 
@@ -22,11 +22,18 @@ export default function ProjectsCarousel() {
 
   const carouselDivMaker = (name: string) => {
     return (
-      <div className="flex flex-col h-[17rem] justify-between">
+      <div className="flex flex-col h-[17rem] justify-between ml-1">
         <div className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg"></div>
-        <div className="italic text-[1.125rem] mt-[2rem]">{name}</div>
+        <div className="italic text-[1.125rem] mt-[2rem] ml-[0.2rem]">
+          {name}
+        </div>
       </div>
     );
+  };
+
+  const displayArray = (array: string[]) => {
+    array.unshift(array.pop()!);
+    return array;
   };
 
   return (
@@ -40,10 +47,10 @@ export default function ProjectsCarousel() {
       autoPlay={true}
       autoPlaySpeed={5000}
       transitionDuration={500}
+      partialVisible={true}
+      className="ml-[-23.1rem] "
     >
-      {arrayOfNames.map((name) => (
-        <div key={name}>{carouselDivMaker(name)}</div>
-      ))}
+      {displayArray(arrayOfNames).map((name) => carouselDivMaker(name))}
     </Carousel>
   );
 }
