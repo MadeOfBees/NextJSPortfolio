@@ -27,15 +27,21 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
 
   const sendEmail = () => {
     if (emailContents.email && emailContents.body && emailContents.sender) {
+      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      if (!emailRegex.test(emailContents.email)) {
+        alert("Please enter a valid email");
+        return;
+      }
       const { email, body, sender } = emailContents;
-      const emailBody = `From: ${sender}\n${body}`;
-      const emailSubject = "New message from your website!";
-      const emailTo = "bee@gmail.com";
+      const emailSubject = `Hey Bee, I'm ${sender} and I'd like to work with you`;
+      const emailTo = "xronsredstone@gmail.com";
       const emailFrom = email;
       const emailFromName = sender;
-      window.location.href = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
+      const emailBody = `${body}%0D%0A%0D%0A${sender}%0D%0A${emailFrom}`;
+      const sendEmail = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}&from=${emailFromName}`;
+      window.open(sendEmail);
     } else {
-      alert("Incomplete form, please fill out all 3 fields");
+      alert("Please fill out all three fields before sending");
     }
   };
 
