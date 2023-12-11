@@ -6,15 +6,15 @@ export default function ProjectsCarousel() {
   const responsive = {
     desktop: {
       breakpoint: { max: 9001, min: 1250 },
-      items: 4,
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1250, min: 980 },
-      items: 3,
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 980, min: 0 },
-      items: 2,
+      items: 1,
     },
   };
 
@@ -22,9 +22,15 @@ export default function ProjectsCarousel() {
 
   const carouselDivMaker = (name: string) => {
     return (
-      <div className="flex flex-col h-[17rem] justify-between ml-1">
-        <div className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg"></div>
-        <div className="italic text-[1.125rem] mt-[2rem] ml-[0.2rem]">
+      <div className="flex flex-col h-[17rem] items-center ml-1" key={name}>
+        <div
+          className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg"
+          key={name}
+        ></div>
+        <div
+          className="italic text-[1.125rem] mt-[2rem] ml-[-20rem] text-center"
+          key={name}
+        >
           {name}
         </div>
       </div>
@@ -42,13 +48,24 @@ export default function ProjectsCarousel() {
       infinite={true}
       swipeable={true}
       draggable={true}
-      arrows={false}
       keyBoardControl={true}
       autoPlay={true}
       autoPlaySpeed={5000}
       transitionDuration={500}
-      partialVisible={true}
-      className="ml-[-23.1rem] "
+      arrows={true}
+      containerClass="container"
+      customLeftArrow={
+        <button className="group absolute left-0 mb-[13rem] h-[20rem]">
+          <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+          <div className="w-[3rem]"></div>
+        </button>
+      }
+      customRightArrow={
+        <button className="group absolute right-0 mb-[13rem] h-[20rem]">
+          <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+          <div className="w-[3rem]"></div>
+        </button>
+      }
     >
       {displayArray(arrayOfNames).map((name) => carouselDivMaker(name))}
     </Carousel>
