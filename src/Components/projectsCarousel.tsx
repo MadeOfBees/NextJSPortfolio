@@ -22,14 +22,17 @@ export default function ProjectsCarousel() {
 
   const carouselDivMaker = (name: string) => {
     return (
-      <div className="flex flex-col h-[17rem] items-center ml-1" key={name}>
+      <div
+        className="flex flex-col h-[17rem] items-center ml-1"
+        key={name + "Div"}
+      >
         <div
           className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg"
-          key={name}
+          key={name + "Img"}
         ></div>
         <div
           className="italic text-[1.125rem] mt-[2rem] ml-[-20rem] text-center"
-          key={name}
+          key={name + "Name"}
         >
           {name}
         </div>
@@ -37,9 +40,22 @@ export default function ProjectsCarousel() {
     );
   };
 
-  const displayArray = (array: string[]) => {
-    array.unshift(array.pop()!);
-    return array;
+  const CustomLeftArrow = () => {
+    return (
+      <button className="group absolute right-0 mb-[13rem] h-[20rem]">
+        <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+        <div className="w-[3rem]"></div>
+      </button>
+    );
+  };
+
+  const CustomRightArrow = () => {
+    return (
+      <button className="group absolute left-0 mb-[13rem] h-[20rem]">
+        <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+        <div className="w-[3rem]"></div>
+      </button>
+    );
   };
 
   return (
@@ -54,20 +70,10 @@ export default function ProjectsCarousel() {
       transitionDuration={500}
       arrows={true}
       containerClass="container"
-      customLeftArrow={
-        <button className="group absolute left-0 mb-[13rem] h-[20rem]">
-          <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-          <div className="w-[3rem]"></div>
-        </button>
-      }
-      customRightArrow={
-        <button className="group absolute right-0 mb-[13rem] h-[20rem]">
-          <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-          <div className="w-[3rem]"></div>
-        </button>
-      }
+      customLeftArrow={<CustomLeftArrow />}
+      customRightArrow={<CustomRightArrow />}
     >
-      {displayArray(arrayOfNames).map((name) => carouselDivMaker(name))}
+      {(arrayOfNames).map((name) => carouselDivMaker(name))}
     </Carousel>
   );
 }
