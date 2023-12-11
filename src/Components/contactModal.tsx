@@ -51,20 +51,20 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
         </Dialog.Title>
         <div className="text-sm font-bold hidden lg:block">Email</div>
         <input
-          className="text-lg bg-white justify-center pl-6 py-3 rounded-xl border-2 border-solid items-start"
+          className="text-lg bg-white justify-center pl-6 sm:py-3 py-1 rounded-xl border-2 border-solid items-start"
           placeholder="Your email"
           onChange={handleInputChange("email")}
         ></input>
         <div className=" text-sm font-bold mt-6 hidden lg:block">Message</div>
         <input
-          className="text-lg bg-white pl-6 md:pb-28 py-3 rounded-xl border-2 border-solid items-start"
+          className="text-lg bg-white pl-6 md:pb-28 sm:py-3 py-1 rounded-xl border-2 border-solid items-start"
           placeholder="Your message"
           onChange={handleInputChange("body")}
         ></input>
         <div className="text-sm font-bold mt-5 hidden lg:block">Name</div>
         <div className="items-stretch flex flex-col md:flex-row justify-between gap-2.5 mt-1.5">
           <input
-            className="text-lg bg-white justify-center pl-6 py-3 rounded-xl border-2 border-solid items-start"
+            className="text-lg bg-white justify-center pl-6 sm:py-3 py-1 rounded-xl border-2 border-solid items-start"
             placeholder="Your name"
             onChange={handleInputChange("sender")}
           ></input>
