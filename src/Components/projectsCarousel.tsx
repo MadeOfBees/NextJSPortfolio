@@ -5,15 +5,15 @@ import "react-multi-carousel/lib/styles.css";
 export default function ProjectsCarousel() {
   const responsive = {
     desktop: {
-      breakpoint: { max: 9001, min: 1080 },
+      breakpoint: { max: 9001, min: 1250 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1080, min: 740 },
+      breakpoint: { max: 1250, min: 980 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 740, min: 0 },
+      breakpoint: { max: 980, min: 0 },
       items: 1,
     },
   };
