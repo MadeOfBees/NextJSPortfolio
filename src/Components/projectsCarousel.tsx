@@ -40,23 +40,23 @@ export default function ProjectsCarousel() {
     );
   };
 
-  const CustomLeftArrow = () => {
-    return (
-      <button className="group absolute right-0 mb-[13rem] h-[20rem]">
-        <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-        <div className="w-[3rem]"></div>
-      </button>
-    );
-  };
+  const CustomRightArrow = ({ onClick: onclick, ...rest }: any) => {
+        return (
+        <button className="group absolute left-0 mb-[13rem] h-[20rem]" onClick={onclick}>
+            <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+            <div className="w-[3rem]"></div>
+        </button>
+        );
+    };
 
-  const CustomRightArrow = () => {
-    return (
-      <button className="group absolute left-0 mb-[13rem] h-[20rem]">
-        <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-        <div className="w-[3rem]"></div>
-      </button>
-    );
-  };
+    const CustomLeftArrow = ({ onClick: onclick, ...rest }: any) => {
+        return (
+        <button className="group absolute right-0 mb-[13rem] h-[20rem]" onClick={onclick}>
+            <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+            <div className="w-[3rem]"></div>
+        </button>
+        );
+    };
 
   return (
     <Carousel
