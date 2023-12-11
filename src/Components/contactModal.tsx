@@ -45,7 +45,7 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
       onClose={() => setIsOpen(false)}
       className="fixed inset-0 flex justify-center items-center z-50"
     >
-      <Dialog.Panel className="bg-[#EBEAED] flex flex-col space-y-4 rounded-2xl shadow-lg sm:px-[3rem]] sm:px-[2rem] px-[1rem] pb-[1rem] sm:pt-[2rem] sm:pb-[2rem]">
+      <Dialog.Panel className="bg-[#EBEAED] flex flex-col md:space-y-4 space-y-1 rounded-2xl shadow-lg sm:px-[3rem]] sm:px-[2rem] px-[1rem] py-[1rem] sm:pt-[2rem] sm:pb-[2rem]">
         <Dialog.Title className="text-3xl text font-bold hidden md:block">
           Let's work together!
         </Dialog.Title>
