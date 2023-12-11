@@ -37,7 +37,7 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
       const emailTo = "xronsredstone@gmail.com";
       const emailFrom = email;
       const emailFromName = sender;
-      const emailBody = `${body}%0D%0A%0D%0A${sender}%0D%0A${emailFrom}`;
+      const emailBody = `${body}%0D%0A%0D%0A-${sender}%0D%0A(${emailFrom})`;
       const sendEmail = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}&from=${emailFromName}`;
       window.open(sendEmail);
     } else {
