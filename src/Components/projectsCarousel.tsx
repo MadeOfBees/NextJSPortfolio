@@ -5,15 +5,15 @@ import "react-multi-carousel/lib/styles.css";
 export default function ProjectsCarousel() {
   const responsive = {
     desktop: {
-      breakpoint: { max: 9001, min: 1250 },
+      breakpoint: { max: 9001, min: 1080 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1250, min: 980 },
+      breakpoint: { max: 1080, min: 740 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 980, min: 0 },
+      breakpoint: { max: 740, min: 0 },
       items: 1,
     },
   };
@@ -69,7 +69,6 @@ export default function ProjectsCarousel() {
       autoPlaySpeed={5000}
       transitionDuration={500}
       arrows={true}
-      containerClass="container"
       customLeftArrow={<CustomLeftArrow />}
       customRightArrow={<CustomRightArrow />}
     >
