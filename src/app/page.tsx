@@ -9,7 +9,7 @@ import ContactModal from "@/Components/contactModal";
 import { useState } from "react";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="w-[100vw]">

@@ -43,7 +43,8 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
     <Dialog
       open={isOpen}
       onClose={() => setIsOpen(false)}
-      className="fixed inset-0 flex justify-center items-center z-50"
+      // darken background when modal is open
+      className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur-[2px] bg-black bg-opacity-40"
     >
       <Dialog.Panel className="bg-[#EBEAED] flex flex-col md:space-y-4 space-y-1 rounded-2xl shadow-lg sm:px-[3rem]] sm:px-[2rem] px-[1rem] py-[1rem] sm:pt-[2rem] sm:pb-[2rem]">
         <Dialog.Title className="text-3xl text font-bold hidden md:block">
