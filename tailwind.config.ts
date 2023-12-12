@@ -16,6 +16,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'atl': "url('/images/atl.jpg')",
+        'tetris': "url('/images/tetris.png')",
       },
       fontFamily: {
         satoshi: [`var(--font-satoshi)`],

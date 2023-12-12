@@ -8,17 +8,37 @@ import { IoIosArrowDown } from "react-icons/io";
 
 type Props = {
   setIsOpen: (isOpen: boolean) => void;
+  currentSearch: string;
 };
 
-export default function navbar({ setIsOpen }: Props) {
-  const [currentSearch, setCurrentSearch] = useState("home");
-  const projectsArray = ["Daily Sudoku", "Fretboard Quiz", "Blackjack"];
+export default function navbar({ setIsOpen, currentSearch }: Props) {
+  const projectLinks: {
+    [key: string]: string;
+    TSTetris: string;
+    SQLStore: string;
+    shutTheBox: string;
+    ReactJack: string;
+    Rouletteo: string;
+    Sudoku: string;
+    thisPortfolio: string;
+  } = {
+    TSTetris: "/projects/TSTetris",
+    SQLStore: "/projects/SQLStore",
+    shutTheBox: "/projects/shutTheBox",
+    ReactJack: "/projects/ReactJack",
+    Rouletteo: "/projects/Rouletteo",
+    Sudoku: "/projects/dailySudoku",
+    thisPortfolio: "/projects/thisPortfolio",
+  };
 
-  const homeUnderlined = (page: string) => {
-    if (page === currentSearch) {
-      return "mr-4 border-b-2 border-[#FFA500]";
+  const underlineMainRoute = (page: string) => {
+    if (page === "home" && currentSearch === "home") {
+      return "mr-4 underline decoration-[#E9999C] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
+    } else if (page === "projects" && currentSearch === "projects") {
+      return "mr-4 underline decoration-[#E9999C] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
+    } else {
+      return "mr-4";
     }
-    return "mr-4";
   };
 
   return (
@@ -26,9 +46,11 @@ export default function navbar({ setIsOpen }: Props) {
       <div className="flex justify-between items-center mx-auto p-4 text-xl fixed w-full z-20 top-0 start-0 bg-white border-b border-[#000000] border-opacity-20 h-[4.7rem]">
         <nav className="hidden md:block items-center ml-4">
           <button className="mr-8 ml-12">Logo</button>
-          <button className={homeUnderlined("home")}>Home</button>
+          <a className={underlineMainRoute("home")} href="/">
+            Home
+          </a>
           <Menu>
-            <Menu.Button className={homeUnderlined("projects")}>
+            <Menu.Button className={underlineMainRoute("projects")}>
               Projects
             </Menu.Button>
             <Transition
@@ -40,10 +62,14 @@ export default function navbar({ setIsOpen }: Props) {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute top-[3.6rem] left-[14rem] rounded-[.6rem] px-[2rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] opacity-90">
-                {projectsArray.map((project) => (
-                  <Menu.Item as="div" key={project}>
-                    {project}
+              <Menu.Items className="absolute top-[3.6rem] left-[14rem] rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] opacity-90 overflow-auto max-h-[50vh]">
+                {Object.keys(projectLinks).map((project) => (
+                  <Menu.Item
+                    as="div"
+                    key={project}
+                    className="whitespace-nowrap"
+                  >
+                    <a href={projectLinks[project]}>{project}</a>
                   </Menu.Item>
                 ))}
               </Menu.Items>
@@ -83,14 +109,14 @@ export default function navbar({ setIsOpen }: Props) {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] sm:top-[2.5rem] sm:left-[8.45rem] left-0 top-[5.6rem] opacity-90">
-                        {projectsArray.map((project) => (
+                      <Menu.Items className="absolute overflow-auto rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] top-[2.5rem] left-[8.45rem] opacity-90} max-h-[50vh]">
+                        {Object.keys(projectLinks).map((project) => (
                           <Menu.Item
                             as="div"
                             key={project}
                             className="whitespace-nowrap"
                           >
-                            {project}
+                            <a href={projectLinks[project]}>{project}</a>
                           </Menu.Item>
                         ))}
                       </Menu.Items>
@@ -106,7 +132,10 @@ export default function navbar({ setIsOpen }: Props) {
         </div>
         <div className="items-center space-x-6 rtl:space-x-revers flex md:order-2">
           <div className="items-center space-x-1 rtl:space-x-reverse md:hidden mr-4">
-            <button className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white rounded h-[2.2rem] w-[2.2rem]" onClick={() => setIsOpen(true)}>
+            <button
+              className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white rounded h-[2.2rem] w-[2.2rem]"
+              onClick={() => setIsOpen(true)}
+            >
               <LuMailPlus />
             </button>
           </div>
