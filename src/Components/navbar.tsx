@@ -34,10 +34,23 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
   const underlineMainRoute = (page: string) => {
     if (page === "home" && currentSearch === "home") {
       return "mr-4 underline decoration-[#E9999C] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
-    } else if (page === "projects" && currentSearch === "projects") {
+    } else if (page === "projects" && currentSearch[0] === "/") {
       return "mr-4 underline decoration-[#E9999C] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
     } else {
       return "mr-4";
+    }
+  };
+
+  console.log(currentSearch.slice(10));
+
+  const makeCurrentSearchOrange = (page: string) => {
+    const subSearch = currentSearch.slice(10);
+    if (subSearch === "") {
+      return "whitespace-nowrap";
+    } else if (subSearch === page) {
+      return "whitespace-nowrap italic";
+    } else {
+      return "whitespace-nowrap";
     }
   };
 
@@ -67,7 +80,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
                   <Menu.Item
                     as="div"
                     key={project}
-                    className="whitespace-nowrap"
+                    className={makeCurrentSearchOrange(project)}
                   >
                     <a href={projectLinks[project]}>{project}</a>
                   </Menu.Item>
@@ -114,7 +127,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
                           <Menu.Item
                             as="div"
                             key={project}
-                            className="whitespace-nowrap"
+                            className={makeCurrentSearchOrange(project)}
                           >
                             <a href={projectLinks[project]}>{project}</a>
                           </Menu.Item>

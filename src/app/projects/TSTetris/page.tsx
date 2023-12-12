@@ -8,7 +8,7 @@ export default function TSTetrisProjectPage() {
 
   return (
     <main className="w-[100vw]">
-       <NavBar setIsOpen={setIsOpen} currentSearch="projects" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/TSTetris" />
     </main>
   );
 }
