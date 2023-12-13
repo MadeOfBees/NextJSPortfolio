@@ -2,7 +2,11 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-export default function ProjectsCarousel() {
+type Props = {
+  currentSearch?: string;
+};
+
+export default function ProjectsCarousel({ currentSearch }: Props) {
   const responsive = {
     desktop: {
       breakpoint: { max: 9001, min: 1250 },
@@ -18,45 +22,76 @@ export default function ProjectsCarousel() {
     },
   };
 
-  const arrayOfNames = ["one", "two", "three", "four", "five", "six", "seven"];
+  const projectLinks: {
+    [key: string]: string;
+    TSTetris: string;
+    SQLStore: string;
+    shutTheBox: string;
+    ReactJack: string;
+    Rouletteo: string;
+    Sudoku: string;
+    thisPortfolio: string;
+  } = {
+    TSTetris: "/projects/TSTetris",
+    SQLStore: "/projects/SQLStore",
+    shutTheBox: "/projects/shutTheBox",
+    ReactJack: "/projects/ReactJack",
+    Rouletteo: "/projects/Rouletteo",
+    Sudoku: "/projects/dailySudoku",
+    thisPortfolio: "/projects/thisPortfolio",
+  };
+
+  const projectLinksWithoutCurrent = Object.keys(projectLinks).reduce(
+    (acc: any, key) => {
+      if (key !== currentSearch) {
+        acc[key] = projectLinks[key];
+      }
+      return acc;
+    },
+    {}
+  );
 
   const carouselDivMaker = (name: string) => {
     return (
-      <div
-        className="flex flex-col h-[17rem] items-center ml-1"
+      <a
+        className="flex flex-col h-[17rem] ml-1 items-center"
         key={name + "Div"}
+        href={projectLinks[name]}
       >
         <div
           className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg"
           key={name + "Img"}
         ></div>
-        <div
-          className="italic text-[1.125rem] mt-[2rem] ml-[-20rem] text-center"
-          key={name + "Name"}
-        >
+        <div className="text-xl font-bold mt-4 place-self-start ml-[4rem]" key={name + "Text"}>
           {name}
         </div>
-      </div>
+      </a>
     );
   };
 
   const CustomRightArrow = ({ onClick: onclick, ...rest }: any) => {
-        return (
-        <button className="group absolute left-0 mb-[13rem] h-[20rem]" onClick={onclick}>
-            <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-            <div className="w-[3rem]"></div>
-        </button>
-        );
-    };
+    return (
+      <button
+        className="group absolute left-0 mb-[13rem] h-[20rem]"
+        onClick={onclick}
+      >
+        <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+        <div className="w-[3rem]"></div>
+      </button>
+    );
+  };
 
-    const CustomLeftArrow = ({ onClick: onclick, ...rest }: any) => {
-        return (
-        <button className="group absolute right-0 mb-[13rem] h-[20rem]" onClick={onclick}>
-            <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-            <div className="w-[3rem]"></div>
-        </button>
-        );
-    };
+  const CustomLeftArrow = ({ onClick: onclick, ...rest }: any) => {
+    return (
+      <button
+        className="group absolute right-0 mb-[13rem] h-[20rem]"
+        onClick={onclick}
+      >
+        <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+        <div className="w-[3rem]"></div>
+      </button>
+    );
+  };
 
   return (
     <Carousel
@@ -72,7 +107,9 @@ export default function ProjectsCarousel() {
       customLeftArrow={<CustomLeftArrow />}
       customRightArrow={<CustomRightArrow />}
     >
-      {(arrayOfNames).map((name) => carouselDivMaker(name))}
+      {Object.keys(projectLinksWithoutCurrent).map((project) =>
+        carouselDivMaker(project)
+      )}
     </Carousel>
   );
 }

@@ -41,8 +41,6 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
     }
   };
 
-  console.log(currentSearch.slice(10));
-
   const makeCurrentSearchOrange = (page: string) => {
     const subSearch = currentSearch.slice(10);
     if (subSearch === "") {
