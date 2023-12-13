@@ -54,22 +54,24 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
   const carouselDivMaker = (name: string) => {
     return (
       <a
-        className="flex flex-col h-[17rem] ml-1 items-center"
+        className="flex flex-col h-[17rem] items-center"
         key={name + "Div"}
         href={projectLinks[name]}
       >
         <div
-          className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg"
+          className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg "
           key={name + "Img"}
         ></div>
-        <div className="text-xl font-bold mt-4 place-self-start ml-[4rem]" key={name + "Text"}>
-          {name}
+        <div className="w-[22.1rem]">
+          <div className="text-xl font-bold mt-4 text-left" key={name + "Text"}>
+            {name}
+          </div>
         </div>
       </a>
     );
   };
 
-  const CustomRightArrow = ({ onClick: onclick, ...rest }: any) => {
+  const CustomLeftArrow = ({ onClick: onclick, ...rest }: any) => {
     return (
       <button
         className="group absolute left-0 mb-[13rem] h-[20rem]"
@@ -81,7 +83,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     );
   };
 
-  const CustomLeftArrow = ({ onClick: onclick, ...rest }: any) => {
+  const CustomRightArrow = ({ onClick: onclick, ...rest }: any) => {
     return (
       <button
         className="group absolute right-0 mb-[13rem] h-[20rem]"
@@ -98,10 +100,10 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
       responsive={responsive}
       infinite={true}
       swipeable={true}
-      draggable={true}
+      draggable={false}
       keyBoardControl={true}
       autoPlay={true}
-      autoPlaySpeed={5000}
+      autoPlaySpeed={3000}
       transitionDuration={500}
       arrows={true}
       customLeftArrow={<CustomLeftArrow />}
