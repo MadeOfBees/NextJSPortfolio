@@ -58,10 +58,12 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
         key={name + "Div"}
         href={projectLinks[name]}
       >
-        <div
-          className="h-[12rem] w-[22.1rem] bg-[#87A878] rounded-lg "
+        <img
+          className={`h-[12rem] w-[22.1rem] rounded-lg`}
           key={name + "Img"}
-        ></div>
+          src={`/images/${name}.png`}
+          alt={`Image of Bee's Project: ${name}`}
+        ></img>
         <div className="w-[22.1rem]">
           <div className="text-xl font-bold mt-4 text-left" key={name + "Text"}>
             {name}

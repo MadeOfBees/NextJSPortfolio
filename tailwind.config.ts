@@ -16,7 +16,12 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'atl': "url('/images/atl.jpg')",
-        'tetris': "url('/images/tetris.png')",
+        'TSTetris': "url('/images/TSTetris.png')",
+        'ReactJack': "url('/images/TSTetris.png')",
+        'shutTheBox': "url('/images/shutTheBox.jpg')",
+        'Rouletteo': "url('/images/Rouletteo.jpg')",
+        'SQLStore': "url('/images/SQLStore.jpg')",
+        'Sudoku': "url('/images/Sudoku.jpg')"
       },
       fontFamily: {
         satoshi: [`var(--font-satoshi)`],
