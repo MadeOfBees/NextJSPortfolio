@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import NavBar from "@/Components/navbar";
 import { LuMailPlus } from "react-icons/lu";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -68,8 +68,12 @@ export default function Home() {
           </button>
           <div className="flex md:text-3xl text-2xl">Socials</div>
           <div className="flex items-center text-5xl">
-            <FaGithub className="mr-3" />
-            <FaLinkedin />
+            <Link href="https://github.com/MadeOfBees" className="mr-3">
+              <FaGithub />
+            </Link>
+            <Link href="https://www.linkedin.com/in/madeofbees/">
+              <FaLinkedin />
+            </Link>
           </div>
         </div>
       </div>

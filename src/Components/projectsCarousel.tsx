@@ -61,7 +61,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
         <img
           className={`h-[12rem] w-[22.1rem] rounded-lg`}
           key={name + "Img"}
-          src={`/images/${name}.png`}
+          src={`./images/${name}.png`}
           alt={`Image of Bee's Project: ${name}`}
         ></img>
         <div className="w-[22.1rem]">
@@ -70,7 +70,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
           </div>
         </div>
       </a>
-    );
+    );  
   };
 
   const CustomLeftArrow = ({ onClick: onclick, ...rest }: any) => {
