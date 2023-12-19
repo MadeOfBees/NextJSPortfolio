@@ -16,18 +16,18 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
     [key: string]: string;
     TSTetris: string;
     SQLStore: string;
-    shutTheBox: string;
+    ShutTheBox: string;
     ReactJack: string;
     Rouletteo: string;
-    Sudoku: string;
+    DailySudoku: string;
     thisPortfolio: string;
   } = {
     TSTetris: "/projects/TSTetris",
     SQLStore: "/projects/SQLStore",
-    shutTheBox: "/projects/shutTheBox",
+    ShutTheBox: "/projects/ShutTheBox",
     ReactJack: "/projects/ReactJack",
     Rouletteo: "/projects/Rouletteo",
-    Sudoku: "/projects/dailySudoku",
+    DailySudoku: "/projects/DailySudoku",
     thisPortfolio: "/projects/thisPortfolio",
   };
 

@@ -26,18 +26,18 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     [key: string]: string;
     TSTetris: string;
     SQLStore: string;
-    shutTheBox: string;
+    ShutTheBox: string;
     ReactJack: string;
     Rouletteo: string;
-    Sudoku: string;
+    DailySudoku: string;
     thisPortfolio: string;
   } = {
     TSTetris: "/projects/TSTetris",
     SQLStore: "/projects/SQLStore",
-    shutTheBox: "/projects/shutTheBox",
+    ShutTheBox: "/projects/ShutTheBox",
     ReactJack: "/projects/ReactJack",
     Rouletteo: "/projects/Rouletteo",
-    Sudoku: "/projects/dailySudoku",
+    DailySudoku: "/projects/DailySudoku",
     thisPortfolio: "/projects/thisPortfolio",
   };
 
@@ -62,7 +62,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
           className={`h-[12rem] w-[22.1rem] rounded-lg`}
           key={name + "Img"}
           src={`/images/${name}.png`}
-          alt={`Image of Bee's Project: ${name}`}
+          alt={`Image of ${name}`}
         ></img>
         <div className="w-[22.1rem]">
           <div className="text-xl font-bold mt-4 text-left" key={name + "Text"}>

@@ -2,6 +2,7 @@
 import NavBar from "@/Components/navbar";
 import ContactModal from "@/Components/contactModal";
 import ProjectsCarousel from "@/Components/projectsCarousel";
+import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -13,37 +14,49 @@ export default function TSTetrisProjectPage() {
       <NavBar setIsOpen={setIsOpen} currentSearch="/projects/TSTetris" />
 
       <div
-        className="absolute right-0 left-0 m-auto bg-[#122f49] 
-      top-[15rem] h-[40rem] w-[80rem]
+        className="absolute right-0 left-0 m-auto bg-TSTetris bg-cover
+      lg:h-[35rem] lg:w-[65rem]
+      md:h-[22.5rem] md:w-[45rem]
+      sm:h-[15rem] sm:w-[30rem]
+      top-[15rem] h-[10rem] w-[20rem]
       "
       ></div>
 
-      <div className="bg-[#87A878] h-[80vh] justify-start md:pl-[7rem] pl-[5rem] pt-[4.4rem]">
-        <h1 className="text-5xl sm:text-6xl font-bold text-white">TSTetris</h1>
+      <div className="bg-[#87A878] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
+        <h1 className="text-6xl mt-[3rem] font-bold text-white">TSTetris</h1>
       </div>
       <div className="bg-white flex flex-col text-black h-[40rem] justify-center items-center">
-        <div className="">
-          <p className="text-2xl sm:text-3xl mt-4 font-light text-center w-[80vw]">
-            Lorem ipsum dolor sit amet consectetur. Eget faucibus accumsan purus
-            id senectus. Eu ut nullam massa massa sit vestibulum faucibus sapien
-            purus. Cursus risus ullamcorper augue consectetur. Amet placerat
-            aliquam id ut mus eleifend nibh donec vulputate. Ultrices quam
-            venenatis faucibus cras aliquam velit scelerisque.
-          </p>
+        <p className="text-2xl sm:text-3xlfont-light text-center w-[80vw] y-auto">
+          Daily Global Sudoku is a modern port of the classic game Sudoku. The
+          game is built using the popular JavaScript library React, which
+          provides a seamless and fast-paced gaming experience. The game's sleek
+          and polished look is achieved through the use of Material-UI, a
+          popular styling library. The game's daily puzzle update feature,
+          powered by a server and a MongoDB database, ensures that players are
+          never bored and can enjoy a fresh and challenging puzzle every day.
+          Deployed on the Heroku cloud platform, the game offers high
+          availability and scalability, ensuring that users can access the game
+          anytime and anywhere. The game also features a leaderboard where
+          players can compare their scores with their friends and add an element
+          of competition to the game. Whether you are a fan of the classic game
+          of Sudoku or are just looking for a new and challenging puzzle, then
+          try out Daily Global Sudoku today!
+        </p>
+        <div className="bg-white flex flex-col text-black h-[40rem] justify-center items-center">
           <div className="flex md:flex-row flex-col mx-auto w-[50vw] items-center md:justify-between justify-center">
-            <a
+            <Link
               className="mt-[3rem] flex flex-row items-center justify-center bg-[#87A878] hover:bg-[#9ebd90] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
-              href="github.com"
+              href="https://github.com/MadeOfBees/DailySudoku/"
             >
               <FaGithub className="mr-2" />
               <p className="text-2xl">Github</p>
-            </a>
-            <a
+            </Link>
+            <Link
               className="mt-[3rem] flex flex-row items-center justify-center bg-[#87A878] hover:bg-[#9ebd90] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
-              href="github.com"
+              href="https://daily-global-sudoku.herokuapp.com/"
             >
               <p className="text-2xl">Deployment</p>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
