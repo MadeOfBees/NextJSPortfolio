@@ -16,6 +16,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'atl': "url('/images/atl.jpg')",
+        'MadeOfBees': "url('/images/MadeOfBees.png')"
       },
       fontFamily: {
         satoshi: [`var(--font-satoshi)`],

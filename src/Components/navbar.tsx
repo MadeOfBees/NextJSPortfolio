@@ -2,7 +2,7 @@
 
 import React from "react";
 import { LuMailPlus, LuMenu } from "react-icons/lu";
-import { useState, Fragment } from "react";
+import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -56,7 +56,14 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
     <header className="h-[4.7rem]">
       <div className="flex justify-between items-center mx-auto p-4 text-xl fixed w-full z-20 top-0 start-0 bg-white border-b border-[#000000] border-opacity-20 h-[4.7rem]">
         <nav className="hidden md:block items-center ml-4">
-          <button className="mr-8 ml-12">Logo</button>
+          <button
+            className="mr-8 ml-12 bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
+            ⠀
+          </button>
           <a className={underlineMainRoute("home")} href="/">
             Home
           </a>

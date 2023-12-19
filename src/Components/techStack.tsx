@@ -5,14 +5,12 @@ import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
-import { FaPhp } from "react-icons/fa";
-
+import { SiVite } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { FaLinux } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
 import { SiUnrealengine } from "react-icons/si";
 import { SiAdobe } from "react-icons/si";
 import { SiBlender } from "react-icons/si";
@@ -36,7 +34,7 @@ export default function TechStack() {
         "React",
         "TailwindCSS",
         "Typescript",
-        "Php",
+        "Vite",
       ],
     },
     {
@@ -81,7 +79,7 @@ export default function TechStack() {
       React: FaReact,
       TailwindCSS: SiTailwindcss,
       Typescript: SiTypescript,
-      Php: FaPhp,
+      Vite: SiVite,
       NodeJs: FaNodeJs,
       MongoDB: SiMongodb,
       MySQL: GrMysql,
