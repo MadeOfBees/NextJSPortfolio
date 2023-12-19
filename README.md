@@ -1,6 +1,6 @@
 # bees-portfolio
 
-This is my portfolio made in nextJS, I'm using a database to populate the projects pages, the nav bar, and more. My first project using Tailwind. Click the deployment link: https://bees-portfolio.herokuapp.com/ to navigate to the site.
+This is my updated portfolio made in nextJS, TailwindCSS, and Typescript.
 
 ## Report an issue:
 
