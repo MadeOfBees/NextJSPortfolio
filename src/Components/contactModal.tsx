@@ -34,7 +34,7 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
       }
       const { email, body, sender } = emailContents;
       const emailSubject = `Hey Bee, I'm ${sender} and I'd like to work with you`;
-      const emailTo = "xronsredstone@gmail.com";
+      const emailTo = "madeofbees@gmail.com";
       const emailFrom = email;
       const emailFromName = sender;
       const emailBody = `${body}%0D%0A%0D%0A-${sender}%0D%0A(${emailFrom})`;
