@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="w-[100vw]">
       <NavBar setIsOpen={setIsOpen} currentSearch="home" />
-      <div className="bg-[#87A878] px-[4.9rem] py-[4.4rem] min-h-[33rem] justify-start">
+      <div className="bg-[#87A878] lg:px-[4.9rem] md:px-[3.5rem] sm:px-[2.5rem] px-[1.2rem] py-[4.4rem] min-h-[33rem] justify-start">
         <h1 className="text-5xl sm:text-6xl font-bold text-white">
           Hi, I'm Bee.
         </h1>

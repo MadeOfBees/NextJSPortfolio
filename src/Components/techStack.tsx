@@ -29,13 +29,7 @@ export default function TechStack() {
       name: "Front-end",
       description:
         "With a focus on designing fast and responsive web apps, I use Next.js, Tailwind CSS, and TypeScript to create elegant and efficient user experiences.",
-      images: [
-        "NextJS",
-        "React",
-        "TailwindCSS",
-        "Typescript",
-        "Vite",
-      ],
+      images: ["NextJS", "React", "TailwindCSS", "Typescript", "Vite"],
     },
     {
       name: "Back-end",
@@ -46,14 +40,8 @@ export default function TechStack() {
     {
       name: "Game Development",
       description:
-        "With engines ranging from ZDoom to Unreal Engine 3/4 and even some unity, I've created and released several games on PC and Android with a focus on 3D graphics and gameplay.",
-      images: [
-        "Unreal",
-        "Adobe",
-        "Blender",
-        "Unity",
-        "Android",
-      ],
+        "With engines ranging from ZDoom to Unreal Engine 3/4 and even some Unity, I've created and released several games on PC and Android with a focus on 3D graphics and gameplay.",
+      images: ["Unreal", "Adobe", "Blender", "Unity", "Android"],
     },
   ];
 
@@ -91,8 +79,7 @@ export default function TechStack() {
       Unity: SiUnity,
       Android: FaAndroid,
     }[img];
-  }
-    
+  };
 
   const stackBlock = () => {
     return techStacks.map((stack) => (
