@@ -1,6 +1,6 @@
 # bees-portfolio
 
-This is my updated portfolio made in nextJS, TailwindCSS, and Typescript.
+This is my updated portfolio made in nextJS, TailwindCSS, and Typescript. Click here to see the deployment: https://madeofbees.github.io/bees-portfolio/
 
 ## Report an issue:
 
