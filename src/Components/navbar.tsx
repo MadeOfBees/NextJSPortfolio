@@ -147,7 +147,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
         </div>
         <div className="md:hidden">
           <button
-            className="mr-8 ml-12 bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
+            className="bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
             onClick={() => {
               window.location.href = "/bees-portfolio";
             }}
