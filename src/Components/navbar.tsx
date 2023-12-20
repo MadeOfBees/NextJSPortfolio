@@ -146,7 +146,14 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
           </Menu>
         </div>
         <div className="md:hidden">
-          <button>Logo</button>
+          <button
+            className="mr-8 ml-12 bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
+            onClick={() => {
+              window.location.href = "/bees-portfolio";
+            }}
+          >
+            ⠀
+          </button>
         </div>
         <div className="items-center space-x-6 rtl:space-x-revers flex md:order-2">
           <div className="items-center space-x-1 rtl:space-x-reverse md:hidden mr-4">
