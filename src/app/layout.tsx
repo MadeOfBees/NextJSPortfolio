@@ -57,7 +57,7 @@ const Satoshi = localFont({
     },
   ],
 });
-
+// <meta name="darkreader-lock">
 export const metadata: Metadata = {
   title: "Made Of Bees",
   description: "Made Of Bees",
@@ -70,6 +70,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="darkreader-lock" />
       <body className={`${Satoshi.variable} font-satoshi`}>
         <main className="font-satoshi">{children}</main>
       </body>
