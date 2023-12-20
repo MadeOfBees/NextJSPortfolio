@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
         <div className="h-[0.1rem] bg-white mt-4"></div>
         <p className="text-2xl sm:text-3xl text-white mt-4 max-w-[33rem] py-[5rem] font-light">
-          A Full Stack Web Developer with a flair for turning complex problems
+          A Full Stack Web Developer with a passion for turning complex problems
           into elegant, user-friendly solutions. My journey in tech is peppered
           with unique experiences that fuel my innovative approach to web
           development.

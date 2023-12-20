@@ -11,7 +11,7 @@ export default function ReactJackProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/ReactJack" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/ReactJack" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-ReactJack bg-cover

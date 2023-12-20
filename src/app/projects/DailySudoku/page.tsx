@@ -11,7 +11,7 @@ export default function DailySudokuProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/DailySudoku" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/DailySudoku" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-DailySudoku bg-cover

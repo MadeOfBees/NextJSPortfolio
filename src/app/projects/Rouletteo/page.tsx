@@ -11,7 +11,7 @@ export default function RouletteoProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/Rouletteo" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/Rouletteo" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-Rouletteo bg-cover

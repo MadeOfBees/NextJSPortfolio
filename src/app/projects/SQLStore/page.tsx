@@ -11,7 +11,7 @@ export default function SQLStoreProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/SQLStore" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/SQLStore" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-SQLStore bg-cover

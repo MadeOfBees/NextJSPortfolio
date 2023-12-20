@@ -11,7 +11,7 @@ export default function thisPortfolioProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/thisPortfolio" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/thisPortfolio" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-thisPortfolio bg-cover
