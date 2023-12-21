@@ -25,7 +25,7 @@ export default function Home() {
           with unique experiences that fuel my innovative approach to web
           development.
         </p>
-        <div className="absolute right-[4rem] top-[21rem] w-[25rem] h-[25rem] bg-white rounded-full hidden lg:block"></div>
+        <div className="absolute right-[4rem] top-[21rem] w-[25rem] h-[25rem] bg-myFace bg-cover rounded-full hidden lg:block"></div>
       </div>
       <div className="bg-[#272A38] flex flex-col text-white justify-center min-h-[40rem]">
         <div className="justify-center px-16 py-12 max-md:px-5">

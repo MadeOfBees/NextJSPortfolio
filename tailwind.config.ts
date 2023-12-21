@@ -17,6 +17,7 @@ const config: Config = {
       backgroundImage: {
         'atl': "url('/images/atl.jpg')",
         'MadeOfBees': "url('/images/MadeOfBees.png')",
+        'myFace': "url('/images/myFace.jpg')",
         'ReactJack': "url('/images/ReactJack.png')",
         'Rouletteo': "url('/images/Rouletteo.png')",
         'ShutTheBox': "url('/images/ShutTheBox.png')",
