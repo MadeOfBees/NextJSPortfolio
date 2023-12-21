@@ -11,7 +11,7 @@ export default function ShutTheBoxProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/ShutTheBox" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/ShutTheBox" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-ShutTheBox bg-cover

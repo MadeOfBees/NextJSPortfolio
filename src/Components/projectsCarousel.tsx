@@ -32,13 +32,13 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     DailySudoku: string;
     thisPortfolio: string;
   } = {
-    TSTetris: "/bees-portfolio/projects/TSTetris",
-    SQLStore: "/bees-portfolio/projects/SQLStore",
-    ShutTheBox: "/bees-portfolio/projects/ShutTheBox",
-    ReactJack: "/bees-portfolio/projects/ReactJack",
-    Rouletteo: "/bees-portfolio/projects/Rouletteo",
-    DailySudoku: "/bees-portfolio/projects/DailySudoku",
-    thisPortfolio: "/bees-portfolio/projects/thisPortfolio",
+    TSTetris: "/projects/TSTetris",
+    SQLStore: "/projects/SQLStore",
+    ShutTheBox: "/projects/ShutTheBox",
+    ReactJack: "/projects/ReactJack",
+    Rouletteo: "/projects/Rouletteo",
+    DailySudoku: "/projects/DailySudoku",
+    thisPortfolio: "/projects/thisPortfolio",
   };
 
   const projectLinksWithoutCurrent = Object.keys(projectLinks).reduce(
@@ -61,7 +61,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
         <img
           className={`h-[12rem] w-[22.1rem] rounded-lg`}
           key={name + "Img"}
-          src={`/bees-portfolio/images/${name}.png`}
+          src={`/images/${name}.png`}
           alt={`Image of ${name}`}
         ></img>
         <div className="w-[22.1rem]">

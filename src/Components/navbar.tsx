@@ -22,13 +22,13 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
     DailySudoku: string;
     thisPortfolio: string;
   } = {
-    TSTetris: "/bees-portfolio/projects/TSTetris",
-    SQLStore: "/bees-portfolio/projects/SQLStore",
-    ShutTheBox: "/bees-portfolio/projects/ShutTheBox",
-    ReactJack: "/bees-portfolio/projects/ReactJack",
-    Rouletteo: "/bees-portfolio/projects/Rouletteo",
-    DailySudoku: "/bees-portfolio/projects/DailySudoku",
-    thisPortfolio: "/bees-portfolio/projects/thisPortfolio",
+    TSTetris: "/projects/TSTetris",
+    SQLStore: "/projects/SQLStore",
+    ShutTheBox: "/projects/ShutTheBox",
+    ReactJack: "/projects/ReactJack",
+    Rouletteo: "/projects/Rouletteo",
+    DailySudoku: "/projects/DailySudoku",
+    thisPortfolio: "/projects/thisPortfolio",
   };
 
   const underlineMainRoute = (page: string) => {
@@ -59,12 +59,12 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
           <button
             className="mr-8 ml-12 bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
             onClick={() => {
-              window.location.href = "/bees-portfolio";
+              window.location.href = "/";
             }}
           >
             ⠀
           </button>
-          <a className={underlineMainRoute("home")} href="/bees-portfolio">
+          <a className={underlineMainRoute("home")} href="/">
             Home
           </a>
           <Menu>
@@ -149,7 +149,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
           <button
             className="bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
             onClick={() => {
-              window.location.href = "/bees-portfolio";
+              window.location.href = "/";
             }}
           >
             ⠀

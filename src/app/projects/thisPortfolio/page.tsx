@@ -11,7 +11,7 @@ export default function thisPortfolioProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/thisPortfolio" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/thisPortfolio" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-thisPortfolio bg-cover
@@ -46,7 +46,7 @@ export default function thisPortfolioProjectPage() {
             </Link>
             <Link
               className="mt-[3rem] flex flex-row items-center justify-center bg-[#87A878] hover:bg-[#9ebd90] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
-              href="https://bees-portfolio.herokuapp.com/"
+              href="https://madeofbees.org"
             >
               <p className="text-2xl">Deployment</p>
             </Link>

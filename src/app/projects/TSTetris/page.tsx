@@ -11,7 +11,7 @@ export default function TSTetrisProjectPage() {
 
   return (
     <main className="w-[100vw] relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/bees-portfolio/projects/TSTetris" />
+      <NavBar setIsOpen={setIsOpen} currentSearch="//projects/TSTetris" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-TSTetris bg-cover
