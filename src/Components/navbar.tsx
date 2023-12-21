@@ -14,20 +14,20 @@ type Props = {
 export default function navbar({ setIsOpen, currentSearch }: Props) {
   const projectLinks: {
     [key: string]: string;
+    DailySudoku: string;
     TSTetris: string;
     SQLStore: string;
     ShutTheBox: string;
     ReactJack: string;
     Rouletteo: string;
-    DailySudoku: string;
     thisPortfolio: string;
   } = {
+    DailySudoku: "/projects/DailySudoku",
     TSTetris: "/projects/TSTetris",
     SQLStore: "/projects/SQLStore",
     ShutTheBox: "/projects/ShutTheBox",
     ReactJack: "/projects/ReactJack",
     Rouletteo: "/projects/Rouletteo",
-    DailySudoku: "/projects/DailySudoku",
     thisPortfolio: "/projects/thisPortfolio",
   };
 

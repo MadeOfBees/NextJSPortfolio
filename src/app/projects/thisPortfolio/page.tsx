@@ -22,7 +22,7 @@ export default function thisPortfolioProjectPage() {
       "
       ></div>
 
-      <div className="bg-[#87A878] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
+      <div className="bg-[#455D3C] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
         <h1 className="text-6xl mt-[3rem] font-bold text-white">
           thisPortfolio
         </h1>
@@ -38,14 +38,14 @@ export default function thisPortfolioProjectPage() {
         <div className="bg-white flex flex-col text-black justify-center items-center">
           <div className="flex md:flex-row flex-col w-[50vw] items-center md:justify-between justify-center">
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#87A878] hover:bg-[#9ebd90] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#455D3C] hover:bg-[#5D7F52] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://github.com/MadeOfBees/bees-portfolio"
             >
               <FaGithub className="mr-2" />
               <p className="text-2xl">Github</p>
             </Link>
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#87A878] hover:bg-[#9ebd90] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#455D3C] hover:bg-[#5D7F52] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://madeofbees.org"
             >
               <p className="text-2xl">Deployment</p>

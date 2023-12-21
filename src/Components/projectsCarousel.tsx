@@ -57,9 +57,10 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
         className="flex flex-col h-[17rem] items-center"
         key={name + "Div"}
         href={projectLinks[name]}
+        tabIndex={-1}
       >
         <img
-          className={`h-[12rem] w-[22.1rem] rounded-lg`}
+          className={`w-[22rem] rounded-lg`}
           key={name + "Img"}
           src={`/images/${name}.png`}
           alt={`Image of ${name}`}
@@ -78,9 +79,10 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
       <button
         className="group absolute left-0 mb-[13rem] h-[20rem]"
         onClick={onclick}
+        aria-label="Swipe from left"
       >
-        <div className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
-        <div className="w-[3rem]"></div>
+        <div aria-hidden="true" className="hidden group-hover:block bg-gradient-to-l from-transparent to-black p-4 h-[20rem] opacity-30"></div>
+        <div aria-hidden="true" className="w-[3rem]"></div>
       </button>
     );
   };
@@ -90,6 +92,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
       <button
         className="group absolute right-0 mb-[13rem] h-[20rem]"
         onClick={onclick}
+        aria-label="Swipe from right"
       >
         <div className="hidden group-hover:block bg-gradient-to-r from-transparent to-black p-4 h-[20rem] opacity-30"></div>
         <div className="w-[3rem]"></div>
