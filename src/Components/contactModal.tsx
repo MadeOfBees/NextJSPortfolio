@@ -75,7 +75,7 @@ export default function ContactModal({ isOpen, setIsOpen }: Props) {
             onChange={handleInputChange("sender")}
           ></input>
           <div
-            className="flex items-center justify-center bg-[#455D3C] hover:bg-[#5D7F52] text-white px-5 rounded-xl text-xl font-bold cursor-pointer py-[0.5rem]"
+            className="flex items-center justify-center bg-[#6839b5] hover:bg-[#8458cb] text-white px-5 rounded-xl text-xl font-bold cursor-pointer py-[0.5rem]"
             onClick={sendEmail}
           >
             Send

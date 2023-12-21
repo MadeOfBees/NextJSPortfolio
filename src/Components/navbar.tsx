@@ -33,9 +33,9 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
 
   const underlineMainRoute = (page: string) => {
     if (page === "home" && currentSearch === "home") {
-      return "mr-4 underline decoration-[#E9999C] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
+      return "mr-4 underline decoration-[#A89545] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
     } else if (page === "projects" && currentSearch[0] === "/") {
-      return "mr-4 underline decoration-[#E9999C] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
+      return "mr-4 underline decoration-[#A89545] decoration-thickness-[0.2rem] decoration-skip-ink decoration-thickness-[0.4rem]";
     } else {
       return "mr-4";
     }

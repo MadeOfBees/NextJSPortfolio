@@ -22,7 +22,7 @@ export default function ReactJackProjectPage() {
       "
       ></div>
 
-      <div className="bg-[#455D3C] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
+      <div className="bg-[#6839b5] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
         <h1 className="text-6xl mt-[3rem] font-bold text-white">ReactJack</h1>
       </div>
       <div className="bg-white lg:h-[7rem] md:h-[5rem] sm:[4rem] h-[3rem]" />
@@ -33,14 +33,14 @@ export default function ReactJackProjectPage() {
         <div className="bg-white flex flex-col text-black justify-center items-center">
           <div className="flex md:flex-row flex-col w-[50vw] items-center md:justify-between justify-center">
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#455D3C] hover:bg-[#5D7F52] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#6839b5] hover:bg-[#8458cb] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://github.com/MadeOfBees/ReactJack"
             >
               <FaGithub className="mr-2" />
               <p className="text-2xl">Github</p>
             </Link>
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#455D3C] hover:bg-[#5D7F52] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#6839b5] hover:bg-[#8458cb] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://madeofbees.github.io/ReactJack/"
             >
               <p className="text-2xl">Deployment</p>
