@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+// import the css from our app folder in nextjs
 import "./globals.css";
 
 const Satoshi = localFont({
@@ -57,7 +58,7 @@ const Satoshi = localFont({
     },
   ],
 });
-// <meta name="darkreader-lock">
+
 export const metadata: Metadata = {
   title: "Made Of Bees",
   description: "Made Of Bees",
