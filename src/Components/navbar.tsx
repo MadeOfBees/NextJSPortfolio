@@ -58,6 +58,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
         <nav className="hidden md:block items-center ml-4">
           <button
             className="mr-8 ml-12 bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
+            style={{ WebkitUserSelect: "none" }}
             onClick={() => {
               window.location.href = "/";
             }}
@@ -148,6 +149,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
         <div className="md:hidden">
           <button
             className="bg-MadeOfBees bg-cover bg-center h-10 w-10 text-opacity-0 rounded-full"
+            style={{ WebkitUserSelect: "none" }}
             onClick={() => {
               window.location.href = "/";
             }}
