@@ -28,13 +28,13 @@ export default function TechStack() {
     {
       name: "Front-end",
       description:
-        "With a focus on designing fast and responsive web apps, I use Next.js, Tailwind CSS, and TypeScript to create elegant and efficient user experiences.",
+        "With a focus on designing fast and responsive web apps, I use React, Next.js, Tailwind CSS, and TypeScript and more to create elegant and efficient user experiences that are both beautiful and functional.",
       images: ["NextJS", "React", "TailwindCSS", "Typescript", "Vite"],
     },
     {
       name: "Back-end",
       description:
-        "Using tools like Node.js, MongoDB, and MySQL, I build robust back-end systems that power my full-stack web apps.",
+        "Using tools like Node.js, MongoDB, and MySQL, I build robust back-end systems that power my full-stack web apps that focus on speed, scalability and efficiency to ensure a smooth user experience.",
       images: ["NodeJs", "MongoDB", "MySQL", "Linux", "Github"],
     },
     {

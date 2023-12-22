@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="">
       <NavBar setIsOpen={setIsOpen} currentSearch="home" />
-      <div className="bg-[#6839b5] lg:px-[4.9rem] md:px-[3.5rem] sm:px-[2.5rem] px-[1.2rem] py-[4.4rem] min-h-[33rem] justify-start">
+      <div className="bg-[#4b815c] lg:px-[4.9rem] md:px-[3.5rem] sm:px-[2.5rem] px-[1.2rem] py-[4.4rem] min-h-[33rem] justify-start">
         <h1 className="text-5xl sm:text-6xl font-bold text-white">
           Hi, I'm Bee.
         </h1>
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex-col flex text-white min-h-[48.6rem] max-w-[100vw] text-center items-center justify-around bg-atl bg-cover">
-        <div className="flex flex-col items-center space-y-10 max-w-[65rem] bg-black rounded-xl bg-opacity-50 p-[1rem]">
+        <div className="flex flex-col items-center space-y-10 max-w-[65rem] bg-black rounded-xl bg-opacity-50 p-[1rem] m-[1rem]">
    
           <div className="text-5xl font-bold max-md:text-4xl">
             Born and raised in Atlanta
