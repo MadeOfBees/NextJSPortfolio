@@ -10,7 +10,7 @@ export default function SQLStoreProjectPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="w-[100vw] relative">
+    <main className="overflow-hidden relative">
       <NavBar setIsOpen={setIsOpen} currentSearch="/projects/SQLStore" />
 
       <div
@@ -23,7 +23,9 @@ export default function SQLStoreProjectPage() {
       ></div>
 
       <div className="bg-[#4b815c] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
-        <h1 className="text-6xl mt-[3rem] font-bold text-white">SQLStore</h1>
+        <h1 className="text-5xl sm:text-6xl  mt-[3rem] font-bold text-white">
+          SQLStore
+        </h1>
       </div>
       <div className="bg-white lg:h-[7rem] md:h-[5rem] sm:[4rem] h-[3rem]" />
       <div className="bg-white flex flex-col text-black justify-center items-center">
@@ -36,18 +38,17 @@ export default function SQLStoreProjectPage() {
           interface.
         </p>
         <div className="bg-white text-black justify-center items-center">
-            <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
-              href="https://github.com/MadeOfBees/SQLStore"
-            >
-              <FaGithub className="mr-2" />
-              <p className="text-2xl">Github</p>
-            </Link>
+          <Link
+            className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+            href="https://github.com/MadeOfBees/SQLStore"
+          >
+            <FaGithub className="mr-2" />
+            <p className="text-2xl">Github</p>
+          </Link>
         </div>
       </div>
-      <div className="mt-[3rem]">
-        <ProjectsCarousel currentSearch="SQLStore" />
-      </div>
+      <div className="h-[3rem] bg-white" />
+      <ProjectsCarousel currentSearch="SQLStore" />
       <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );

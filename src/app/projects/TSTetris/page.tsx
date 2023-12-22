@@ -10,7 +10,7 @@ export default function TSTetrisProjectPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="w-[100vw] relative">
+    <main className="overflow-hidden relative">
       <NavBar setIsOpen={setIsOpen} currentSearch="//projects/TSTetris" />
 
       <div
@@ -23,7 +23,9 @@ export default function TSTetrisProjectPage() {
       ></div>
 
       <div className="bg-[#4b815c] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
-        <h1 className="text-6xl mt-[3rem] font-bold text-white">TSTetris</h1>
+        <h1 className="text-5xl sm:text-6xl  mt-[3rem] font-bold text-white">
+          TSTetris
+        </h1>
       </div>
       <div className="bg-white lg:h-[7rem] md:h-[5rem] sm:[4rem] h-[3rem]" />
       <div className="bg-white flex flex-col text-black justify-center items-center">
@@ -54,9 +56,8 @@ export default function TSTetrisProjectPage() {
           </div>
         </div>
       </div>
-      <div className="mt-[3rem]">
-        <ProjectsCarousel currentSearch="TSTetris" />
-      </div>
+      <div className="h-[3rem] bg-white" />
+      <ProjectsCarousel currentSearch="TSTetris" />
       <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );

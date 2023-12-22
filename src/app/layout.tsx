@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="darkreader-lock" />
-      <body className={`${Satoshi.variable} font-satoshi bg-[#4b815c]`}>
+      <body className={`${Satoshi.variable} font-satoshi bg-gradient-to-t from-white to-[#4b815c] via-[#4b815c]`}>
         <main className="font-satoshi">{children}</main>
       </body>
     </html>

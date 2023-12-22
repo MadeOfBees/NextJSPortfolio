@@ -10,7 +10,7 @@ export default function DailySudokuProjectPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="w-[100vw] relative">
+    <main className="overflow-hidden relative">
       <NavBar setIsOpen={setIsOpen} currentSearch="/projects/DailySudoku" />
 
       <div
@@ -23,12 +23,27 @@ export default function DailySudokuProjectPage() {
       ></div>
 
       <div className="bg-[#4b815c] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
-        <h1 className="text-6xl mt-[3rem] font-bold text-white">DailySudoku</h1>
+        <h1 className="text-5xl sm:text-6xl mt-[3rem] font-bold text-white">
+          DailySudoku
+        </h1>
       </div>
       <div className="bg-white lg:h-[7rem] md:h-[5rem] sm:[4rem] h-[3rem]" />
       <div className="bg-white flex flex-col text-black justify-center items-center">
         <p className="font-light text-center w-[80vw] py-auto lg:text-3xl md:text-2xl sm:text-xl text-lg">
-        Daily Global Sudoku is a modern port of the classic game Sudoku. The game is built using the popular JavaScript library React, which provides a seamless and fast-paced gaming experience. The game's sleek and polished look is achieved through the use of Material-UI, a popular styling library. The game's daily puzzle update feature, powered by a server and a MongoDB database, ensures that players are never bored and can enjoy a fresh and challenging puzzle every day. Deployed on the Heroku cloud platform, the game offers high availability and scalability, ensuring that users can access the game anytime and anywhere. The game also features a leaderboard where players can compare their scores with their friends and add an element of competition to the game. Whether you are a fan of the classic game of Sudoku or are just looking for a new and challenging puzzle, then try out Daily Global Sudoku today!
+          Daily Global Sudoku is a modern port of the classic game Sudoku. The
+          game is built using the popular JavaScript library React, which
+          provides a seamless and fast-paced gaming experience. The game's sleek
+          and polished look is achieved through the use of Material-UI, a
+          popular styling library. The game's daily puzzle update feature,
+          powered by a server and a MongoDB database, ensures that players are
+          never bored and can enjoy a fresh and challenging puzzle every day.
+          Deployed on the Heroku cloud platform, the game offers high
+          availability and scalability, ensuring that users can access the game
+          anytime and anywhere. The game also features a leaderboard where
+          players can compare their scores with their friends and add an element
+          of competition to the game. Whether you are a fan of the classic game
+          of Sudoku or are just looking for a new and challenging puzzle, then
+          try out Daily Global Sudoku today!
         </p>
         <div className="bg-white flex flex-col text-black justify-center items-center">
           <div className="flex md:flex-row flex-col w-[50vw] items-center md:justify-between justify-center">
@@ -48,9 +63,8 @@ export default function DailySudokuProjectPage() {
           </div>
         </div>
       </div>
-      <div className="mt-[3rem]">
-        <ProjectsCarousel currentSearch="DailySudoku" />
-      </div>
+      <div className="h-[3rem] bg-white" />
+      <ProjectsCarousel currentSearch="DailySudoku" />
       <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );

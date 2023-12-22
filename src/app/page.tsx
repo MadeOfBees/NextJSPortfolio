@@ -12,7 +12,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="">
+    <main className="overflow-hidden">
       <NavBar setIsOpen={setIsOpen} currentSearch="home" />
       <div className="bg-[#4b815c] lg:px-[4.9rem] md:px-[3.5rem] sm:px-[2.5rem] px-[1.2rem] py-[4.4rem] min-h-[33rem] justify-start">
         <h1 className="text-5xl sm:text-6xl font-bold text-white">

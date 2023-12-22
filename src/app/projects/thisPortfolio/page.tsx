@@ -10,7 +10,7 @@ export default function thisPortfolioProjectPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="w-[100vw] relative">
+    <main className="overflow-hidden relative">
       <NavBar setIsOpen={setIsOpen} currentSearch="/projects/thisPortfolio" />
 
       <div
@@ -23,7 +23,7 @@ export default function thisPortfolioProjectPage() {
       ></div>
 
       <div className="bg-[#4b815c] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
-        <h1 className="text-6xl mt-[3rem] font-bold text-white">
+        <h1 className="text-5xl sm:text-6xl  mt-[3rem] font-bold text-white">
           thisPortfolio
         </h1>
       </div>
@@ -38,14 +38,14 @@ export default function thisPortfolioProjectPage() {
         <div className="bg-white flex flex-col text-black justify-center items-center">
           <div className="flex md:flex-row flex-col w-[50vw] items-center md:justify-between justify-center">
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#8458cb] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://github.com/MadeOfBees/bees-portfolio"
             >
               <FaGithub className="mr-2" />
               <p className="text-2xl">Github</p>
             </Link>
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#8458cb] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://madeofbees.org"
             >
               <p className="text-2xl">Deployment</p>
@@ -53,9 +53,8 @@ export default function thisPortfolioProjectPage() {
           </div>
         </div>
       </div>
-      <div className="mt-[3rem]">
-        <ProjectsCarousel currentSearch="thisPortfolio" />
-      </div>
+      <div className="h-[3rem] bg-white" />
+      <ProjectsCarousel currentSearch="thisPortfolio" />
       <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );

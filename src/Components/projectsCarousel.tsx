@@ -8,8 +8,16 @@ type Props = {
 
 export default function ProjectsCarousel({ currentSearch }: Props) {
   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 999999, min: 3600 },
+      items: 7,
+    },
+    largeDesktop: {
+      breakpoint: { max: 3600, min: 2100 },
+      items: 5,
+    },
     desktop: {
-      breakpoint: { max: 9001, min: 1250 },
+      breakpoint: { max: 2100, min: 1250 },
       items: 3,
     },
     tablet: {
@@ -65,7 +73,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
           src={`/images/${name}.png`}
           alt={`Image of ${name}`}
         ></img>
-        <div className="w-[22.1rem]">
+        <div className="w-[22.1rem] overflow-hidden">
           <div className="text-xl font-bold mt-4 text-left" key={name + "Text"}>
             {name}
           </div>
@@ -113,6 +121,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
       arrows={true}
       customLeftArrow={<CustomLeftArrow />}
       customRightArrow={<CustomRightArrow />}
+      className="bg-white overflow-hidden"
     >
       {Object.keys(projectLinksWithoutCurrent).map((project) =>
         carouselDivMaker(project)
