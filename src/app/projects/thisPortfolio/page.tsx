@@ -36,14 +36,14 @@ export default function thisPortfolioProjectPage() {
         <div className="bg-white flex flex-col text-black justify-center items-center">
           <div className="flex md:flex-row flex-col w-[50vw] items-center md:justify-between justify-center">
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#8458cb] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://github.com/MadeOfBees/bees-portfolio"
             >
               <FaGithub className="mr-2" />
               <p className="text-2xl">Github</p>
             </Link>
             <Link
-              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#8458cb] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
+              className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
               href="https://madeofbees.org"
             >
               <p className="text-2xl">Deployment</p>
