@@ -5,15 +5,13 @@ import { LuMailPlus } from "react-icons/lu";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TechStack from "@/Components/techStack";
 import ProjectsCarousel from "@/Components/projectsCarousel";
-import ContactModal from "@/Components/contactModal";
-import { useState } from "react";
+import { clickContact } from "@/utils/workWithMe";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="overflow-hidden">
-      <NavBar setIsOpen={setIsOpen} currentSearch="home" />
+      <NavBar currentSearch="home" />
       <div className="bg-[#4b815c] lg:px-[4.9rem] md:px-[3.5rem] sm:px-[2.5rem] px-[1.2rem] py-[4.4rem] min-h-[33rem] justify-start">
         <h1 className="text-5xl sm:text-6xl font-bold text-white">
           Hi, I'm Bee.
@@ -63,7 +61,7 @@ export default function Home() {
           </div>
           <button
             className="flex items-center justify-center bg-white hover:bg-[#999999] text-black px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem] text-xl"
-            onClick={() => setIsOpen(true)}
+            onClick={() => clickContact()}
           >
             <LuMailPlus className="mr-2" />
             Work with me
@@ -79,7 +77,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );
 }

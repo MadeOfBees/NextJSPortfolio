@@ -1,17 +1,15 @@
 "use client";
 import NavBar from "@/Components/navbar";
-import ContactModal from "@/Components/contactModal";
 import ProjectsCarousel from "@/Components/projectsCarousel";
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 export default function SQLStoreProjectPage() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="overflow-hidden relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/SQLStore" />
+     <NavBar currentSearch="/projects/SQLStore" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-SQLStore bg-cover
@@ -49,7 +47,6 @@ export default function SQLStoreProjectPage() {
       </div>
       <div className="h-[3rem] bg-white" />
       <ProjectsCarousel currentSearch="SQLStore" />
-      <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );
 }

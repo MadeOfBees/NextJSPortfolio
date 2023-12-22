@@ -1,17 +1,16 @@
 "use client";
-
 import React from "react";
 import { LuMailPlus, LuMenu } from "react-icons/lu";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { IoIosArrowDown } from "react-icons/io";
+import { clickContact } from "@/utils/workWithMe";
 
 type Props = {
-  setIsOpen: (isOpen: boolean) => void;
   currentSearch: string;
 };
 
-export default function navbar({ setIsOpen, currentSearch }: Props) {
+export default function navbar({ currentSearch }: Props) {
   const projectLinks: {
     [key: string]: string;
     DailySudoku: string;
@@ -110,7 +109,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
               leaveTo="transform opacity-0 scale-95"
             >
               <Menu.Items className="absolute top-[3.8rem] rounded-[.6rem] px-[1rem] py-[.6rem] space-y-[.6rem] shadow-md bg-[#EBEAED] opacity-90">
-                <Menu.Item as="div" key="Home">
+                <Menu.Item as="a" key="Home" href="/">
                   Home
                 </Menu.Item>
                 <Menu.Items as="div" key="Projects">
@@ -161,7 +160,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
           <div className="items-center space-x-1 rtl:space-x-reverse md:hidden mr-4">
             <button
               className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white rounded h-[2.2rem] w-[2.2rem]"
-              onClick={() => setIsOpen(true)}
+              onClick={() => clickContact()}
             >
               <LuMailPlus />
             </button>
@@ -169,7 +168,7 @@ export default function navbar({ setIsOpen, currentSearch }: Props) {
           <div className="relative hidden md:block space-x-1 rtl:space-x-reverse">
             <button
               className="mr-12 flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem]"
-              onClick={() => setIsOpen(true)}
+              onClick={() => clickContact()}
             >
               <LuMailPlus className="mr-2" />
               Work with me

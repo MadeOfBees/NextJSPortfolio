@@ -1,17 +1,15 @@
 "use client";
 import NavBar from "@/Components/navbar";
-import ContactModal from "@/Components/contactModal";
 import ProjectsCarousel from "@/Components/projectsCarousel";
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 export default function ReactJackProjectPage() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="overflow-hidden relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="/projects/ReactJack" />
+     <NavBar currentSearch="/projects/ReactJack" />
 
       <div
         className="items-center absolute right-0 left-0 m-auto bg-ReactJack bg-cover
@@ -58,7 +56,6 @@ export default function ReactJackProjectPage() {
       </div>
       <div className="h-[3rem] bg-white" />
       <ProjectsCarousel currentSearch="ReactJack" />
-      <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );
 }

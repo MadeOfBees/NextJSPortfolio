@@ -1,17 +1,15 @@
 "use client";
 import NavBar from "@/Components/navbar";
-import ContactModal from "@/Components/contactModal";
 import ProjectsCarousel from "@/Components/projectsCarousel";
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 export default function TSTetrisProjectPage() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <main className="overflow-hidden relative">
-      <NavBar setIsOpen={setIsOpen} currentSearch="//projects/TSTetris" />
+     <NavBar currentSearch="//projects/TSTetris" />
 
       <div
         className="absolute right-0 left-0 m-auto bg-TSTetris bg-cover
@@ -58,7 +56,6 @@ export default function TSTetrisProjectPage() {
       </div>
       <div className="h-[3rem] bg-white" />
       <ProjectsCarousel currentSearch="TSTetris" />
-      <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </main>
   );
 }
