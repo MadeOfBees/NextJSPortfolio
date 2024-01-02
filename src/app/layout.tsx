@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
 
 const Satoshi = localFont({
   variable: "--font-satoshi",
@@ -70,8 +71,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-360BYMRCDY" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-360BYMRCDY');
+        `}
+      </Script>
       <meta name="darkreader-lock" />
-      <body className={`${Satoshi.variable} font-satoshi bg-gradient-to-t from-white to-[#4b815c] via-[#4b815c]`}>
+      <body
+        className={`${Satoshi.variable} font-satoshi bg-gradient-to-t from-white to-[#4b815c] via-[#4b815c]`}
+      >
         <main className="font-satoshi">{children}</main>
       </body>
     </html>
