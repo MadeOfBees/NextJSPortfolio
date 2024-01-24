@@ -5,14 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
-export default function thisPortfolioProjectPage() {
+export default function ThisPortfolioProjectPage() {
 
   return (
     <main className="overflow-hidden relative">
-     <NavBar currentSearch="/projects/thisPortfolio" />
+     <NavBar currentSearch="/projects/ThisPortfolio" />
 
       <div
-        className="absolute right-0 left-0 m-auto bg-thisPortfolio bg-cover
+        className="absolute right-0 left-0 m-auto bg-ThisPortfolio bg-cover
       lg:h-[35rem] lg:w-[65rem]
       md:h-[22.5rem] md:w-[45rem]
       sm:h-[15rem] sm:w-[30rem]
@@ -22,7 +22,7 @@ export default function thisPortfolioProjectPage() {
 
       <div className="bg-[#4b815c] text-center lg:h-[40rem] md:h-[30rem] sm:h-[24rem] h-[18rem] flex flex-col">
         <h1 className="text-5xl sm:text-6xl  mt-[3rem] font-bold text-white">
-          thisPortfolio
+          ThisPortfolio
         </h1>
       </div>
       <div className="bg-white lg:h-[7rem] md:h-[5rem] sm:[4rem] h-[3rem]" />
@@ -52,7 +52,7 @@ export default function thisPortfolioProjectPage() {
         </div>
       </div>
       <div className="h-[3rem] bg-white" />
-      <ProjectsCarousel currentSearch="thisPortfolio" />
+      <ProjectsCarousel currentSearch="ThisPortfolio" />
     </main>
   );
 }

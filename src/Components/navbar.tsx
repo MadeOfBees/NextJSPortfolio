@@ -19,7 +19,7 @@ export default function navbar({ currentSearch }: Props) {
     ShutTheBox: string;
     ReactJack: string;
     Rouletteo: string;
-    thisPortfolio: string;
+    ThisPortfolio: string;
   } = {
     DailySudoku: "/projects/DailySudoku",
     TSTetris: "/projects/TSTetris",
@@ -27,7 +27,7 @@ export default function navbar({ currentSearch }: Props) {
     ShutTheBox: "/projects/ShutTheBox",
     ReactJack: "/projects/ReactJack",
     Rouletteo: "/projects/Rouletteo",
-    thisPortfolio: "/projects/thisPortfolio",
+    ThisPortfolio: "/projects/ThisPortfolio",
   };
 
   const underlineMainRoute = (page: string) => {

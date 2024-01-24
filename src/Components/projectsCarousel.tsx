@@ -38,7 +38,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     ReactJack: string;
     Rouletteo: string;
     DailySudoku: string;
-    thisPortfolio: string;
+    ThisPortfolio: string;
   } = {
     TSTetris: "/projects/TSTetris",
     SQLStore: "/projects/SQLStore",
@@ -46,7 +46,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     ReactJack: "/projects/ReactJack",
     Rouletteo: "/projects/Rouletteo",
     DailySudoku: "/projects/DailySudoku",
-    thisPortfolio: "/projects/thisPortfolio",
+    ThisPortfolio: "/projects/ThisPortfolio",
   };
 
   const projectLinksWithoutCurrent = Object.keys(projectLinks).reduce(

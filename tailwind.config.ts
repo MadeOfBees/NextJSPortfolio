@@ -23,7 +23,7 @@ const config: Config = {
         'ShutTheBox': "url('/images/ShutTheBox.png')",
         'SQLStore': "url('/images/SQLStore.png')",
         'DailySudoku': "url('/images/DailySudoku.png')",
-        'thisPortfolio': "url('/images/thisPortfolio.png')",
+        'ThisPortfolio': "url('/images/ThisPortfolio.png')",
         'TSTetris': "url('/images/TSTetris.png')",
       },
       fontFamily: {
