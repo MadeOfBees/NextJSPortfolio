@@ -96,7 +96,8 @@ export default function navbar({ currentSearch }: Props) {
         </nav>
         <div className="md:hidden ml-4">
           <Menu>
-            <Menu.Button className="flex ring-2 ring-[#313445] rounded h-[2.2rem] w-[2.2rem] justify-center items-center">
+            <Menu.Button className="flex ring-2 ring-[#313445] rounded h-[2.2rem] w-[2.2rem] justify-center items-center"
+            aria-label="menu">
               <LuMenu />
             </Menu.Button>
             <Transition
@@ -161,6 +162,7 @@ export default function navbar({ currentSearch }: Props) {
             <button
               className="flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white rounded h-[2.2rem] w-[2.2rem]"
               onClick={() => clickContact()}
+              aria-label="contact me"
             >
               <LuMailPlus />
             </button>
@@ -170,7 +172,7 @@ export default function navbar({ currentSearch }: Props) {
               className="mr-12 flex items-center justify-center bg-[#313445] hover:bg-[#42465d] text-white px-3 rounded h-[2.2rem] w-[11.5rem] text-[1.125rem]"
               onClick={() => clickContact()}
             >
-              <LuMailPlus className="mr-2" />
+              <LuMailPlus className="mr-2" aria-label="contact me" />
               Work with me
             </button>
           </div>
