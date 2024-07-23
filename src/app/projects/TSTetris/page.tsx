@@ -39,7 +39,7 @@ export default function TSTetrisProjectPage() {
         <div className="bg-white text-black justify-center items-center">
           <Link
             className="mt-[3rem] flex flex-row items-center justify-center bg-[#4b815c] hover:bg-[#5c9e72] text-white px-3 rounded h-[2.2rem] w-[10rem] text-[1.125rem] text-xl"
-            href="https://github.com/MadeOfBees/TSTetris"
+            href="https://github.com/MadeOfBees/typescript-tetris"
           >
             <FaGithub className="mr-2" />
             <p className="text-2xl">Github</p>
