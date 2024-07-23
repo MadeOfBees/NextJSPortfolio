@@ -39,6 +39,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     Rouletteo: string;
     DailySudoku: string;
     ThisPortfolio: string;
+    VapeJourney: string;
   } = {
     TSTetris: "/projects/TSTetris",
     SQLStore: "/projects/SQLStore",
@@ -47,6 +48,7 @@ export default function ProjectsCarousel({ currentSearch }: Props) {
     Rouletteo: "/projects/Rouletteo",
     DailySudoku: "/projects/DailySudoku",
     ThisPortfolio: "/projects/ThisPortfolio",
+    VapeJourney: "/projects/VapeJourney",
   };
 
   const projectLinksWithoutCurrent = Object.keys(projectLinks).reduce(

@@ -14,20 +14,22 @@ export default function navbar({ currentSearch }: Props) {
   const projectLinks: {
     [key: string]: string;
     DailySudoku: string;
+    VapeJourney: string;
+    ThisPortfolio: string;
     TSTetris: string;
     SQLStore: string;
     ShutTheBox: string;
     ReactJack: string;
     Rouletteo: string;
-    ThisPortfolio: string;
   } = {
     DailySudoku: "/projects/DailySudoku",
+    VapeJourney: "/projects/VapeJourney",
+    ThisPortfolio: "/projects/ThisPortfolio",
     TSTetris: "/projects/TSTetris",
     SQLStore: "/projects/SQLStore",
     ShutTheBox: "/projects/ShutTheBox",
     ReactJack: "/projects/ReactJack",
     Rouletteo: "/projects/Rouletteo",
-    ThisPortfolio: "/projects/ThisPortfolio",
   };
 
   const underlineMainRoute = (page: string) => {
